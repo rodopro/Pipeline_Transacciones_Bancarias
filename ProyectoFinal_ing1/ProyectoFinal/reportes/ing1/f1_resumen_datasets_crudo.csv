@@ -1,0 +1,4 @@
+﻿dataset,filas,columnas,celdas,celdas_ausentes,completitud_global_pct,duplicados_exactos,pct_duplicados_exactos,llave,duplicados_por_llave
+catalogo_cuentas,50,6,300,0,100.0,0,0.0,id_cuenta,0
+transacciones_atm,620,8,4960,71,98.57,20,3.23,id_transaccion,20
+transferencias_digitales,600,10,6000,16,99.73,0,0.0,transfer_id,0

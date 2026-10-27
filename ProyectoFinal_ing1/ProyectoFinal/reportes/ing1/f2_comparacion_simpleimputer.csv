@@ -1,0 +1,4 @@
+﻿tipo_operacion,nulos_a_imputar,mediana_global_SimpleImputer,mediana_por_grupo_pipeline,diferencia_mxn,media_del_grupo,categorica_equivale_SimpleImputer_constant
+DEPOSITO,7,3000.0,4000.0,1000.0,4741.67,True
+PAGO_SERVICIOS,4,3000.0,4000.0,1000.0,5345.45,True
+RETIRO,16,3000.0,2000.0,-1000.0,17488.62,True

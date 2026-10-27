@@ -1,0 +1,16 @@
+﻿dataset,variable_con_nulos,n_nulos,pct_nulos,n_evaluado,variable_explicativa,tipo,evidencia_sesion22,brecha_pp,prueba,estadistico,frec_esperada_min,p_valor,significativo,conclusion
+transacciones_atm,monto_mxn,27,5.37,503.0,tipo_operacion,categórica,DEPOSITO=5.5%; PAGO_SERVICIOS=3.5%; RETIRO=6.1%,2.6,Chi²,1.063,6.12,0.5879,no,MCAR
+transacciones_atm,monto_mxn,27,5.37,503.0,resultado,categórica,EXITOSA=5.3%; FALLO_CONEXION=4.0%; FALLO_FONDOS=7.1%,3.1,Chi²,0.847,4.56,0.6079,no,MCAR
+transacciones_atm,monto_mxn,27,5.37,503.0,id_cajero,categórica,ATM-COL-01=9.7%; ATM-COL-02=4.7%; ATM-MZL-01=5.5%; ATM-TECO-01=3.1%; ATM-VDA-01=3.8%,6.6,Chi²,5.048,4.31,0.3505,no,MCAR
+transacciones_atm,monto_mxn,27,5.37,503.0,comision_aplicada,numérica,,,Mann-Whitney U,6492.5,,0.926,no,MCAR
+transacciones_atm,id_cajero,42,7.0,600.0,tipo_operacion,categórica,CONSULTA_SALDO=10.3%; DEPOSITO=7.9%; PAGO_SERVICIOS=7.0%; RETIRO=5.3%,5.0,Chi²,2.885,6.79,0.4097,no,MCAR
+transacciones_atm,id_cajero,42,7.0,600.0,resultado,categórica,EXITOSA=7.4%; FALLO_CONEXION=8.5%; FALLO_FONDOS=3.8%,4.7,Chi²,2.107,7.28,0.3488,no,MCAR
+transacciones_atm,id_cajero,42,7.0,600.0,monto_mxn,numérica,,,Mann-Whitney U,9425.5,,0.1451,no,MCAR
+transacciones_atm,id_cajero,42,7.0,600.0,comision_aplicada,numérica,,,Mann-Whitney U,13057.0,,0.2017,no,MCAR
+transacciones_atm,comision_aplicada,0,,,,,,,,,,,,SIN NULOS
+transferencias_digitales,notification_email,16,2.67,600.0,status,categórica,DEVUELTA=2.3%; LIQUIDADA=4.2%; PENDIENTE=2.6%; RECHAZADA=0.0%,4.2,Chi²,5.529,3.07,0.1196,no,MCAR
+transferencias_digitales,notification_email,16,2.67,600.0,currency,categórica,MXN=2.6%; USD=3.0%,0.4,Chi²,0.067,3.57,1.0,no,MCAR
+transferencias_digitales,notification_email,16,2.67,600.0,concept,categórica,Comida=4.3%; Nómina=3.2%; Pago Renta=2.1%; Préstamo=3.7%; Servicios=2.6%; Transferencia=0.0%,4.3,Chi²,4.159,2.48,0.5395,no,MCAR
+transferencias_digitales,notification_email,16,2.67,600.0,platform,categórica,API EMPRESARIAL=1.8%; APP ANDROID=3.4%; APP IOS=3.6%; WEB BANKING=2.0%,1.8,Chi²,1.534,3.71,0.6749,no,MCAR
+transferencias_digitales,notification_email,16,2.67,600.0,amount,numérica,,,Mann-Whitney U,5314.0,,0.3484,no,MCAR
+transferencias_digitales,amount,0,,,,,,,,,,,,SIN NULOS
