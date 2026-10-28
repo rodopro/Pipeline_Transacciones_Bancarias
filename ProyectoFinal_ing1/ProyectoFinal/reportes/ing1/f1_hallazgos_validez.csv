@@ -1,0 +1,22 @@
+﻿dataset,columna,hallazgo,registros_afectados,pct,fase_responsable,accion_propuesta
+transacciones_atm,(fila completa),Duplicados exactos = reintentos de cajero,20,3.23,Fase 2 (Ing. 1),Eliminar duplicados
+transacciones_atm,fecha_hora,Fechas en 3 formatos distintos,420,67.74,Fase 4 (Ing. 2),Homologar ISO
+transferencias_digitales,timestamp,timestamp mezcla ISO con epoch,195,32.5,Fase 4 (Ing. 2),Convertir epoch
+transacciones_atm,resultado,Etiquetas con mayúsculas/minúsculas inconsistentes,85,13.71,Fase 2 (Ing. 1),strip() + upper()
+transferencias_digitales,status,Etiquetas con mayúsculas/minúsculas inconsistentes,121,20.17,Fase 2 (Ing. 1),strip() + upper()
+transacciones_atm,monto_mxn,monto = 0 en CONSULTA_SALDO (VÁLIDO),101,16.29,Fase 3 (Ing. 1),NO eliminar
+transacciones_atm,monto_mxn,monto <= 0 en operaciones monetarias,0,0.0,Fase 3 (Ing. 1),Eliminar
+transacciones_atm,monto_mxn,Montos negativos,0,0.0,Fase 3 (Ing. 1),Eliminar
+transacciones_atm,monto_mxn,Outliers por IQR×1.5,1,0.16,Fase 3 (Ing. 1),Capping
+transacciones_atm,monto_mxn,Outliers por Z-score,1,0.16,Fase 3 (Ing. 1),Comparar
+transferencias_digitales,amount,Outliers por Z-score,12,2.0,Fase 3 (Ing. 1),Comparar
+transferencias_digitales,amount,Montos <= 0,0,0.0,Fase 3 (Ing. 1),Eliminar
+transferencias_digitales,amount,Outliers por IQR,18,3.0,Fase 3 (Ing. 1),Capping
+transferencias_digitales,currency,Importes en USD,134,22.33,Fase 4 (Ing. 2),Convertir MXN
+transacciones_atm,comision_aplicada,Comisión = 0.0,171,27.58,Fase 2 (Ing. 1),Conservar
+transacciones_atm,id_cuenta,Cuentas huérfanas,32,5.16,Fase 4 (Ing. 2),Cuarentena
+transferencias_digitales,account_id,Cuentas huérfanas,29,4.83,Fase 4 (Ing. 2),Cuarentena
+transferencias_digitales,beneficiary_clabe,CLABE != 18 dígitos,46,7.67,Fase 6 (Ing. 3),Cuarentena
+transferencias_digitales,beneficiary_clabe,CLABE convertida a int64 pierde cero inicial,554,92.33,Fase 1 (Ing. 1),Carga segura
+transferencias_digitales,notification_email,Nulos ocultos (vacíos),8,1.33,Fase 1-2 (Ing. 1),Convertir a NaN
+transferencias_digitales,notification_email,Correo inválido,30,5.0,Fase 6 (Ing. 3),Cuarentena

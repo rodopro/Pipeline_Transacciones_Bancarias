@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1296pt" height="1180.8pt" viewBox="0 0 1296 1180.8" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-27T16:35:44.928838</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 1180.8 
+L 1296 1180.8 
+L 1296 0 
+L 0 0 
+z
+" style="fill: #f5f8fc"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 648 248.4 
+L 640.08 261.36 
+L 655.92 261.36 
+z
+" clip-path="url(#p4b63af38be)" style="fill: #ffffff; stroke: #2557a7; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 456.48 136.8 
+L 839.52 136.8 
+Q 849.6 136.8 849.6 146.88 
+L 849.6 238.32 
+Q 849.6 248.4 839.52 248.4 
+L 456.48 248.4 
+Q 446.4 248.4 446.4 238.32 
+L 446.4 146.88 
+Q 446.4 136.8 456.48 136.8 
+z
+" clip-path="url(#p4b63af38be)" style="fill: #edf3ff; stroke: #2557a7; stroke-width: 1.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="line2d_1">
+    <path d="M 396 302.4 
+L 396 275.04 
+L 1029.6 275.04 
+L 1029.6 302.4 
+" clip-path="url(#p4b63af38be)" style="fill: none; stroke: #2557a7; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 648 275.04 
+L 648 261.36 
+" clip-path="url(#p4b63af38be)" style="fill: none; stroke: #2557a7; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 53.28 302.4 
+L 738.72 302.4 
+Q 748.8 302.4 748.8 312.48 
+L 748.8 984.24 
+Q 748.8 994.32 738.72 994.32 
+L 53.28 994.32 
+Q 43.2 994.32 43.2 984.24 
+L 43.2 312.48 
+Q 43.2 302.4 53.28 302.4 
+z
+" clip-path="url(#p4b63af38be)" style="fill: #ffffff; stroke: #15734c; stroke-width: 1.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 816.48 302.4 
+L 1242.72 302.4 
+Q 1252.8 302.4 1252.8 312.48 
+L 1252.8 582.48 
+Q 1252.8 592.56 1242.72 592.56 
+L 816.48 592.56 
+Q 806.4 592.56 806.4 582.48 
+L 806.4 312.48 
+Q 806.4 302.4 816.48 302.4 
+z
+" clip-path="url(#p4b63af38be)" style="fill: #ffffff; stroke: #ad3442; stroke-width: 1.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 816.48 691.2 
+L 1242.72 691.2 
+Q 1252.8 691.2 1252.8 701.28 
+L 1252.8 875.52 
+Q 1252.8 885.6 1242.72 885.6 
+L 816.48 885.6 
+Q 806.4 885.6 806.4 875.52 
+L 806.4 701.28 
+Q 806.4 691.2 816.48 691.2 
+z
+" clip-path="url(#p4b63af38be)" style="fill: #ffffff; stroke: #d2dce9; stroke-width: 1.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 816.48 914.4 
+L 1242.72 914.4 
+Q 1252.8 914.4 1252.8 924.48 
+L 1252.8 1051.92 
+Q 1252.8 1062 1242.72 1062 
+L 816.48 1062 
+Q 806.4 1062 806.4 1051.92 
+L 806.4 924.48 
+Q 806.4 914.4 816.48 914.4 
+z
+" clip-path="url(#p4b63af38be)" style="fill: #edf3ff; stroke: #2557a7; stroke-width: 1.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="line2d_3">
+    <path d="M 43.2 364.32 
+L 748.8 364.32 
+" clip-path="url(#p4b63af38be)" style="fill: none; stroke: #d2dce9; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_4">
+    <path d="M 43.2 762.48 
+L 748.8 762.48 
+" clip-path="url(#p4b63af38be)" style="fill: none; stroke: #d2dce9; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_5">
+    <path d="M 806.4 364.32 
+L 1252.8 364.32 
+" clip-path="url(#p4b63af38be)" style="fill: none; stroke: #d2dce9; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_6">
+    <path d="M 806.4 516.96 
+L 1252.8 516.96 
+" clip-path="url(#p4b63af38be)" style="fill: none; stroke: #d2dce9; stroke-linecap: square"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #2557a7" x="43.2" y="38.039922" transform="rotate(-0 43.2 38.039922)">INGENIERO/A 3  /  MODELO DE VALIDACIÓN</text>
+   </g>
+   <g id="text_2">
+    <text style="font-weight: 700; font-size: 26px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #19283f" x="43.2" y="76.252813" transform="rotate(-0 43.2 76.252813)">Diagrama de clases real</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52637a" x="43.2" y="98.784375" transform="rotate(-0 43.2 98.784375)">Atributos y validadores extraídos de src/modelos_ing3.py. La flecha triangular indica herencia.</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #2557a7" x="648" y="160.325312" transform="rotate(-0 648 160.325312)">«Pydantic v2»</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 21px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #19283f" x="648" y="191.339062" transform="rotate(-0 648 191.339062)">BaseModel</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans Mono'; fill: #19283f" transform="translate(468 211.321562)">+ model_validate(datos, context): modelo</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans Mono'; fill: #19283f" transform="translate(468 227.821562)">+ model_dump(): dict</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #15734c" x="60.48" y="326.645313" transform="rotate(-0 60.48 326.645313)">«clase Pydantic»</text>
+   </g>
+   <g id="text_8">
+    <text style="font-weight: 700; font-size: 20px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #15734c" x="60.48" y="355.31875" transform="rotate(-0 60.48 355.31875)">TransaccionLimpia</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #19283f" x="60.48" y="385.561562" transform="rotate(-0 60.48 385.561562)">+ transaccion_id: str {long. &gt;= 1, long. &lt;= 100}</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #19283f" x="60.48" y="407.881562" transform="rotate(-0 60.48 407.881562)">+ account_id: str {long. &gt;= 1, long. &lt;= 100}</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #19283f" x="60.48" y="430.201562" transform="rotate(-0 60.48 430.201562)">+ tipo_origen: Literal[ATM | SPEI_DIGITAL]</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #19283f" x="60.48" y="452.492344" transform="rotate(-0 60.48 452.492344)">+ fecha_corta: str</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #19283f" x="60.48" y="474.841563" transform="rotate(-0 60.48 474.841563)">+ moneda: Literal[MXN | USD]</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #19283f" x="60.48" y="497.161562" transform="rotate(-0 60.48 497.161562)">+ monto_original: float {&gt;= 0}</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #19283f" x="60.48" y="519.481562" transform="rotate(-0 60.48 519.481562)">+ monto_mxn: float {&gt;= 0}</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #19283f" x="60.48" y="541.801562" transform="rotate(-0 60.48 541.801562)">+ monto_mxn_capped: float {&gt;= 0}</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #19283f" x="60.48" y="564.121562" transform="rotate(-0 60.48 564.121562)">+ monto_minmax: float {&gt;= 0, &lt;= 1}</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #19283f" x="60.48" y="586.441562" transform="rotate(-0 60.48 586.441562)">+ nivel_monto: Literal[Bajo | Medio | Alto]</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #19283f" x="60.48" y="608.761562" transform="rotate(-0 60.48 608.761562)">+ notification_email: str</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #19283f" x="60.48" y="631.081562" transform="rotate(-0 60.48 631.081562)">+ beneficiary_clabe: str | None</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #19283f" x="60.48" y="653.396406" transform="rotate(-0 60.48 653.396406)">+ tipo_operacion: str | None</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #19283f" x="60.48" y="675.721562" transform="rotate(-0 60.48 675.721562)">+ comision_aplicada: float | None</text>
+   </g>
+   <g id="text_23">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #19283f" x="60.48" y="698.041563" transform="rotate(-0 60.48 698.041563)">+ es_huerfano: bool</text>
+   </g>
+   <g id="text_24">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #19283f" x="60.48" y="720.361562" transform="rotate(-0 60.48 720.361562)">+ obs_calidad: str</text>
+   </g>
+   <g id="text_25">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #19283f" x="60.48" y="742.652344" transform="rotate(-0 60.48 742.652344)">+ datos_origen_json: str</text>
+   </g>
+   <g id="text_26">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52637a" x="60.48" y="783.699844" transform="rotate(-0 60.48 783.699844)">VALIDADORES DEFINIDOS EN ESTA CLASE</text>
+   </g>
+   <g id="text_27">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #19283f" x="60.48" y="806.466875" transform="rotate(-0 60.48 806.466875)">+ identificador_valido(...)  [@field_validator]</text>
+   </g>
+   <g id="text_28">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #19283f" x="60.48" y="828.786875" transform="rotate(-0 60.48 828.786875)">+ fecha_iso(...)  [@field_validator]</text>
+   </g>
+   <g id="text_29">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #19283f" x="60.48" y="851.106875" transform="rotate(-0 60.48 851.106875)">+ correo_valido(...)  [@field_validator]</text>
+   </g>
+   <g id="text_30">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #19283f" x="60.48" y="873.426875" transform="rotate(-0 60.48 873.426875)">+ clabe_valida(...)  [@field_validator]</text>
+   </g>
+   <g id="text_31">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #19283f" x="60.48" y="895.746875" transform="rotate(-0 60.48 895.746875)">+ sin_huerfanos(...)  [@field_validator]</text>
+   </g>
+   <g id="text_32">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #19283f" x="60.48" y="918.066875" transform="rotate(-0 60.48 918.066875)">+ sin_booleanos_numericos(...)  [@field_validator]</text>
+   </g>
+   <g id="text_33">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #19283f" x="60.48" y="940.386875" transform="rotate(-0 60.48 940.386875)">+ sin_corrupcion_previa(...)  [@field_validator]</text>
+   </g>
+   <g id="text_34">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #19283f" x="60.48" y="962.706875" transform="rotate(-0 60.48 962.706875)">+ coherencia_negocio(...)  [@model_validator]</text>
+   </g>
+   <g id="text_35">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #ad3442" x="823.68" y="326.645313" transform="rotate(-0 823.68 326.645313)">«clase Pydantic»</text>
+   </g>
+   <g id="text_36">
+    <text style="font-weight: 700; font-size: 20px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #ad3442" x="823.68" y="355.240625" transform="rotate(-0 823.68 355.240625)">RegistroCuarentena</text>
+   </g>
+   <g id="text_37">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #19283f" x="823.68" y="385.561562" transform="rotate(-0 823.68 385.561562)">+ numero_fila: int {&gt;= 1}</text>
+   </g>
+   <g id="text_38">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #19283f" x="823.68" y="407.876406" transform="rotate(-0 823.68 407.876406)">+ transaccion_id: str | None</text>
+   </g>
+   <g id="text_39">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #19283f" x="823.68" y="430.196406" transform="rotate(-0 823.68 430.196406)">+ tipo_origen: str | None</text>
+   </g>
+   <g id="text_40">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #19283f" x="823.68" y="452.521562" transform="rotate(-0 823.68 452.521562)">+ motivo_rechazo_cuarentena: str {long. &gt;= 1}</text>
+   </g>
+   <g id="text_41">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #19283f" x="823.68" y="474.841563" transform="rotate(-0 823.68 474.841563)">+ errores_validacion_json: str {long. &gt;= 2}</text>
+   </g>
+   <g id="text_42">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #19283f" x="823.68" y="497.161562" transform="rotate(-0 823.68 497.161562)">+ registro_original_json: str {long. &gt;= 2}</text>
+   </g>
+   <g id="text_43">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52637a" x="823.68" y="539.105625" transform="rotate(-0 823.68 539.105625)">MÉTODOS HEREDADOS</text>
+   </g>
+   <g id="text_44">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #19283f" x="823.68" y="560.946875" transform="rotate(-0 823.68 560.946875)">Hereda model_validate() y model_dump()</text>
+   </g>
+   <g id="text_45">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #19283f" x="826.56" y="724.39875" transform="rotate(-0 826.56 724.39875)">CÓMO PARTICIPAN EN EL PROCESO</text>
+   </g>
+   <g id="text_46">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #52637a" transform="translate(826.56 753.950938)">1. Entra una fila del DataFrame como dict.</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #52637a" transform="translate(826.56 769.232344)">2. TransaccionLimpia.model_validate()</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #52637a" transform="translate(826.56 785.885313)">   comprueba tipos y reglas de negocio.</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #52637a" transform="translate(826.56 802.605313)">3. Si es válida, devuelve TransaccionLimpia.</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #52637a" transform="translate(826.56 818.885313)">4. Si lanza ValidationError, el except crea</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #52637a" transform="translate(826.56 835.385313)">   un RegistroCuarentena con sus causas.</text>
+   </g>
+   <g id="text_47">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #2557a7" x="826.56" y="945.767812" transform="rotate(-0 826.56 945.767812)">SALIDA DE AMBAS CLASES</text>
+   </g>
+   <g id="text_48">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #52637a" transform="translate(826.56 975.212344)">model_dump() convierte cada objeto en dict.</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #52637a" transform="translate(826.56 991.712344)">cargar_base_datos() persiste ambas listas</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #52637a" transform="translate(826.56 1008.365312)">en sus tablas SQLite. El pipeline exporta</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #52637a" transform="translate(826.56 1025.930937)">las mismas listas a archivos CSV.</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #52637a" transform="translate(826.56 1041.365312)">El flujo de datos detalla entradas y salidas.</text>
+   </g>
+   <g id="text_49">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52637a" x="43.2" y="1146.480312" transform="rotate(-0 43.2 1146.480312)">+ miembro público   |   None: valor nulo permitido; no implica que se pueda omitir el campo   |   {...}: restricciones del esquema</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p4b63af38be">
+   <rect x="0" y="0" width="1296" height="1180.8"/>
+  </clipPath>
+ </defs>
+</svg>

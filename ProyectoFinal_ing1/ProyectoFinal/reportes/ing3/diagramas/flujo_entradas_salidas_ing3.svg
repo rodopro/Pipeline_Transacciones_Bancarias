@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1080pt" height="1504.8pt" viewBox="0 0 1080 1504.8" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-27T16:35:46.434059</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 1504.8 
+L 1080 1504.8 
+L 1080 0 
+L 0 0 
+z
+" style="fill: #f5f8fc"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 540 270 
+Q 540 287.000244 540 301.652617 
+" clip-path="url(#p74967cad17)" style="fill: none; stroke: #2557a7; stroke-width: 2.1; stroke-linecap: round"/>
+    <path d="M 543.4 294.852617 
+L 540 301.652617 
+L 536.6 294.852617 
+z
+" clip-path="url(#p74967cad17)" style="fill: #2557a7; stroke: #2557a7; stroke-width: 2.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 540 417.6 
+Q 540 436.401782 540 452.855693 
+" clip-path="url(#p74967cad17)" style="fill: none; stroke: #2557a7; stroke-width: 2.1; stroke-linecap: round"/>
+    <path d="M 543.4 446.055693 
+L 540 452.855693 
+L 536.6 446.055693 
+z
+" clip-path="url(#p74967cad17)" style="fill: #2557a7; stroke: #2557a7; stroke-width: 2.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 540 583.2 
+Q 540 602.001782 540 618.455693 
+" clip-path="url(#p74967cad17)" style="fill: none; stroke: #2557a7; stroke-width: 2.1; stroke-linecap: round"/>
+    <path d="M 543.4 611.655693 
+L 540 618.455693 
+L 536.6 611.655693 
+z
+" clip-path="url(#p74967cad17)" style="fill: #2557a7; stroke: #2557a7; stroke-width: 2.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 302.4 774 
+Q 302.4 799.999695 302.4 823.651518 
+" clip-path="url(#p74967cad17)" style="fill: none; stroke: #15734c; stroke-width: 2.1; stroke-linecap: round"/>
+    <path d="M 305.8 816.851518 
+L 302.4 823.651518 
+L 299 816.851518 
+z
+" clip-path="url(#p74967cad17)" style="fill: #15734c; stroke: #15734c; stroke-width: 2.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 777.6 774 
+Q 777.6 799.999695 777.6 823.651518 
+" clip-path="url(#p74967cad17)" style="fill: none; stroke: #ad3442; stroke-width: 2.1; stroke-linecap: round"/>
+    <path d="M 781 816.851518 
+L 777.6 823.651518 
+L 774.2 816.851518 
+z
+" clip-path="url(#p74967cad17)" style="fill: #ad3442; stroke: #ad3442; stroke-width: 2.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 277.2 1015.2 
+Q 277.2 1041.199695 277.2 1064.851518 
+" clip-path="url(#p74967cad17)" style="fill: none; stroke: #15734c; stroke-width: 2.1; stroke-linecap: round"/>
+    <path d="M 280.6 1058.051518 
+L 277.2 1064.851518 
+L 273.8 1058.051518 
+z
+" clip-path="url(#p74967cad17)" style="fill: #15734c; stroke: #15734c; stroke-width: 2.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 802.8 1015.2 
+Q 802.8 1041.199695 802.8 1064.851518 
+" clip-path="url(#p74967cad17)" style="fill: none; stroke: #ad3442; stroke-width: 2.1; stroke-linecap: round"/>
+    <path d="M 806.2 1058.051518 
+L 802.8 1064.851518 
+L 799.4 1058.051518 
+z
+" clip-path="url(#p74967cad17)" style="fill: #ad3442; stroke: #ad3442; stroke-width: 2.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 540 1263.6 
+Q 540 1282.401782 540 1298.855693 
+" clip-path="url(#p74967cad17)" style="fill: none; stroke: #2557a7; stroke-width: 2.1; stroke-linecap: round"/>
+    <path d="M 543.4 1292.055693 
+L 540 1298.855693 
+L 536.6 1292.055693 
+z
+" clip-path="url(#p74967cad17)" style="fill: #2557a7; stroke: #2557a7; stroke-width: 2.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 53.28 136.8 
+L 1026.72 136.8 
+Q 1036.8 136.8 1036.8 146.88 
+L 1036.8 259.92 
+Q 1036.8 270 1026.72 270 
+L 53.28 270 
+Q 43.2 270 43.2 259.92 
+L 43.2 146.88 
+Q 43.2 136.8 53.28 136.8 
+z
+" clip-path="url(#p74967cad17)" style="fill: #edf3ff; stroke: #2557a7; stroke-width: 1.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 53.28 306 
+L 1026.72 306 
+Q 1036.8 306 1036.8 316.08 
+L 1036.8 407.52 
+Q 1036.8 417.6 1026.72 417.6 
+L 53.28 417.6 
+Q 43.2 417.6 43.2 407.52 
+L 43.2 316.08 
+Q 43.2 306 53.28 306 
+z
+" clip-path="url(#p74967cad17)" style="fill: #ffffff; stroke: #d2dce9; stroke-width: 1.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 53.28 457.2 
+L 1026.72 457.2 
+Q 1036.8 457.2 1036.8 467.28 
+L 1036.8 573.12 
+Q 1036.8 583.2 1026.72 583.2 
+L 53.28 583.2 
+Q 43.2 583.2 43.2 573.12 
+L 43.2 467.28 
+Q 43.2 457.2 53.28 457.2 
+z
+" clip-path="url(#p74967cad17)" style="fill: #edf3ff; stroke: #2557a7; stroke-width: 1.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 53.28 622.8 
+L 1026.72 622.8 
+Q 1036.8 622.8 1036.8 632.88 
+L 1036.8 763.92 
+Q 1036.8 774 1026.72 774 
+L 53.28 774 
+Q 43.2 774 43.2 763.92 
+L 43.2 632.88 
+Q 43.2 622.8 53.28 622.8 
+z
+" clip-path="url(#p74967cad17)" style="fill: #ffffff; stroke: #d2dce9; stroke-width: 1.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 53.28 828 
+L 501.12 828 
+Q 511.2 828 511.2 838.08 
+L 511.2 1005.12 
+Q 511.2 1015.2 501.12 1015.2 
+L 53.28 1015.2 
+Q 43.2 1015.2 43.2 1005.12 
+L 43.2 838.08 
+Q 43.2 828 53.28 828 
+z
+" clip-path="url(#p74967cad17)" style="fill: #effaf4; stroke: #15734c; stroke-width: 1.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 578.88 828 
+L 1026.72 828 
+Q 1036.8 828 1036.8 838.08 
+L 1036.8 1005.12 
+Q 1036.8 1015.2 1026.72 1015.2 
+L 578.88 1015.2 
+Q 568.8 1015.2 568.8 1005.12 
+L 568.8 838.08 
+Q 568.8 828 578.88 828 
+z
+" clip-path="url(#p74967cad17)" style="fill: #fff3f3; stroke: #ad3442; stroke-width: 1.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 53.28 1069.2 
+L 1026.72 1069.2 
+Q 1036.8 1069.2 1036.8 1079.28 
+L 1036.8 1253.52 
+Q 1036.8 1263.6 1026.72 1263.6 
+L 53.28 1263.6 
+Q 43.2 1263.6 43.2 1253.52 
+L 43.2 1079.28 
+Q 43.2 1069.2 53.28 1069.2 
+z
+" clip-path="url(#p74967cad17)" style="fill: #edf3ff; stroke: #2557a7; stroke-width: 1.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_17">
+    <path d="M 53.28 1303.2 
+L 1026.72 1303.2 
+Q 1036.8 1303.2 1036.8 1313.28 
+L 1036.8 1422.72 
+Q 1036.8 1432.8 1026.72 1432.8 
+L 53.28 1432.8 
+Q 43.2 1432.8 43.2 1422.72 
+L 43.2 1313.28 
+Q 43.2 1303.2 53.28 1303.2 
+z
+" clip-path="url(#p74967cad17)" style="fill: #ffffff; stroke: #d2dce9; stroke-width: 1.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #2557a7" x="43.2" y="37.021563" transform="rotate(-0 43.2 37.021563)">INGENIERO/A 3  /  ENTRADAS Y SALIDAS</text>
+   </g>
+   <g id="text_2">
+    <text style="font-weight: 700; font-size: 26px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #19283f" x="43.2" y="76.772813" transform="rotate(-0 43.2 76.772813)">Cómo entra, se valida y sale cada registro</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52637a" x="43.2" y="98.95125" transform="rotate(-0 43.2 98.95125)">Los conteos corresponden a la ejecución que generó estos diagramas.</text>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #2557a7" x="63.36" y="167.605313" transform="rotate(-0 63.36 167.605313)">ENTRADA  ·  ARCHIVOS PREPARADOS POR INGENIERÍA 1</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(63.36 198.196406)">transacciones_atm_fase2.csv  +  transferencias_digitales_fase2.json</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(63.36 217.956406)">catalogo_cuentas_fase2.csv  →  conjunto de cuentas válidas</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(63.36 238.125703)">Estas entradas se leen de data/interim/.</text>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #19283f" x="63.36" y="337.525312" transform="rotate(-0 63.36 337.525312)">INTEGRACIÓN REUTILIZADA  ·  FASES 3 Y 4</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(63.36 365.677187)">Fechas ISO, USD → MXN a 19.50, capping IQR y marca de cuenta huérfana.</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(63.36 384.917187)">Sale un DataFrame integrado con 1,200 filas; conserva evidencia de calidad.</text>
+   </g>
+   <g id="text_8">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #2557a7" x="63.36" y="488.725312" transform="rotate(-0 63.36 488.725312)">FASE 5  ·  TRANSFORMACIÓN</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(63.36 517.156406)">Entra: monto_mxn_capped, en pesos.</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(63.36 536.656406)">Se agregan: monto_minmax ∈ [0, 1] y nivel_monto ∈ {Bajo, Medio, Alto}.</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(63.36 556.337188)">Salida: el mismo DataFrame con columnas derivadas; los corruptos siguen disponibles para rechazo.</text>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #19283f" x="63.36" y="652.516406" transform="rotate(-0 63.36 652.516406)">FASE 6  ·  segregar_registros(df, cuentas_validas)</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(63.36 683.476406)">Por cada fila: dict → TransaccionLimpia.model_validate(datos, context=...).</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(63.36 703.417187)">Contexto: cuentas del catálogo e identificadores ya aceptados.</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(63.36 722.917187)">Validación: tipos estrictos, fecha, CLABE, correo, importes y coherencia de negocio.</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(63.36 742.417187)">try: devuelve un modelo válido   /   except ValidationError: conserva las causas y el registro.</text>
+   </g>
+   <g id="text_12">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #15734c" x="324" y="801.905625" transform="rotate(-0 324 801.905625)">VALIDACIÓN CORRECTA</text>
+   </g>
+   <g id="text_13">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #ad3442" x="756" y="800.979844" transform="rotate(-0 756 800.979844)">VALIDATIONERROR CAPTURADO</text>
+   </g>
+   <g id="text_14">
+    <text style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #15734c" x="63.36" y="865.847812" transform="rotate(-0 63.36 865.847812)">1,072 REGISTROS VÁLIDOS</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(63.36 894.31125)">list[TransaccionLimpia]</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(63.36 912.31125)">Contiene los campos validados, las variables</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(63.36 930.144375)">transformadas y datos_origen_json.</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(63.36 945)"/>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(63.36 966.31125)">Ejemplo aceptable de CLABE SPEI:</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(63.36 984.55125)">012210100614023846 (texto, 18 dígitos).</text>
+   </g>
+   <g id="text_16">
+    <text style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #ad3442" x="588.96" y="865.331719" transform="rotate(-0 588.96 865.331719)">128 REGISTROS RECHAZADOS</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(588.96 894.31125)">list[RegistroCuarentena]</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(588.96 913.101562)">Guarda número de fila, identificador, motivo,</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(588.96 930.31125)">errores estructurados y registro recibido.</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(588.96 945)"/>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(588.96 966.31125)">Ejemplo: CLABE '12345' → motivo de rechazo.</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(588.96 984.55125)">El procesamiento continúa con la siguiente fila.</text>
+   </g>
+   <g id="text_18">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #2557a7" x="63.36" y="1099.636406" transform="rotate(-0 63.36 1099.636406)">FASE 7  ·  SQLite: cargar_base_datos(limpios, cuarentena, ruta_bd)</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(63.36 1132.217187)">BEGIN IMMEDIATE → INSERT parametrizados en las DOS tablas:</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(63.36 1151.536406)">   transacciones_limpias                       cuarentena_errores</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(63.36 1171.217187)">Todo correcto → commit(): ambas tablas quedan persistidas.</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(63.36 1190.717187)">Error SQL → rollback(): se revierte el lote completo, incluidos los DELETE de reemplazo.</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(63.36 1210.036406)">Archivo predeterminado: data/proyecto_final.sqlite3</text>
+   </g>
+   <g id="text_20">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #19283f" x="63.36" y="1336.165313" transform="rotate(-0 63.36 1336.165313)">ARCHIVOS DE SALIDA  ·  DESPUÉS DEL COMMIT</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(63.36 1364.304375)">reportes/ing3/: fase5_transformadas.csv, transacciones_limpias.csv y cuarentena_errores.csv</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(63.36 1382.544375)">resumen_ing3.json: conteos, parámetros Min-Max/cuantiles e integridad de SQLite.</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(63.36 1400.47125)">diagramas/: pipeline por fases, UML, flujo de datos y visor con los conteos de este lote.</text>
+   </g>
+   <g id="text_22">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #2557a7" x="540" y="1474.937187" transform="rotate(-0 540 1474.937187)">BALANCE DEL LOTE: 1,200 entradas = 1,072 limpias + 128 en cuarentena</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p74967cad17">
+   <rect x="0" y="0" width="1080" height="1504.8"/>
+  </clipPath>
+ </defs>
+</svg>

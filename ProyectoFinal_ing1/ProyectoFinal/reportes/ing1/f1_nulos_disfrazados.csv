@@ -1,0 +1,5 @@
+﻿dataset,columna,valor_encontrado,conteo
+transacciones_atm,monto_mxn,(vacío),27
+transacciones_atm,id_cajero,(vacío),44
+transferencias_digitales,notification_email,(vacío),8
+transferencias_digitales,notification_email,null,8

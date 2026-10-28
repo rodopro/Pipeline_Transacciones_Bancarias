@@ -1,0 +1,5 @@
+﻿variable,etapa,n_no_nulos,nulos,media,mediana,desv_std,sesgo_skew,min,max
+monto_mxn (ATM),antes (crudo),593,27,9316.53,1500.0,143637.62,24.33,0.0,3500000.0
+monto_mxn (ATM),después (Fase 2),600,0,9225.33,1500.0,142797.13,24.47,0.0,3500000.0
+amount (SPEI),antes (crudo),600,0,98261.81,18448.76,533615.81,7.47,73.62,5240100.0
+amount (SPEI),después (Fase 2),600,0,98261.81,18448.76,533615.81,7.47,73.62,5240100.0

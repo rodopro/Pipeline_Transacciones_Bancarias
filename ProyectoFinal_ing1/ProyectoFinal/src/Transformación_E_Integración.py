@@ -4,6 +4,11 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
+try:
+    from .fase5_transformacion import transformacion_discretizacion_escalado
+except ImportError:  # Ejecución directa: python src/Transformación_E_Integración.py
+    from fase5_transformacion import transformacion_discretizacion_escalado
+
 # Configuración visual para las gráficas
 AZUL = "#2a78d6"
 VERDE = "#2eb872"
@@ -38,8 +43,8 @@ PATH_FIGURAS.mkdir(parents=True, exist_ok=True)
 
 def cargar_datos_fuentes(path_cuentas, path_atm, path_json):
     """Fase 4: Carga y consolidación robusta mapeando columnas reales de ATM y JSON"""
-    df_cuentas = pd.read_csv(path_cuentas)
-    df_atm = pd.read_csv(path_atm)
+    df_cuentas = pd.read_csv(path_cuentas, dtype={"id_cuenta": str})
+    df_atm = pd.read_csv(path_atm, dtype={"id_transaccion": str, "id_cuenta": str, "id_cajero": str})
 
     with open(path_json, "r", encoding="utf-8") as f:
         data_json = json.load(f)
@@ -57,8 +62,8 @@ def cargar_datos_fuentes(path_cuentas, path_atm, path_json):
     )
     df_atm["moneda"] = "MXN"
     df_atm["tipo_origen"] = "ATM"
-    df_atm["notification_email"] = "atm_sin_correo@banco.com.mx"
-    df_atm["beneficiary_clabe"] = "000000000000000000"
+    df_atm["notification_email"] = "ANONIMO"
+    df_atm["beneficiary_clabe"] = None  # No aplica a operaciones de cajero.
 
     # 2. Homologar columnas de Transferencias Digitales
     df_json.rename(
@@ -80,6 +85,9 @@ def cargar_datos_fuentes(path_cuentas, path_atm, path_json):
         "tipo_origen",
         "notification_email",
         "beneficiary_clabe",
+        "tipo_operacion",
+        "comision_aplicada",
+        "obs_calidad",
     ]
 
     for col in cols_comunes:
@@ -89,7 +97,7 @@ def cargar_datos_fuentes(path_cuentas, path_atm, path_json):
             df_json[col] = np.nan
 
     df_unificado = pd.concat(
-        [df_atm[cols_comunes], df_json[cols_comunes]], ignore_index=True
+        [df_atm, df_json], ignore_index=True
     )
     return df_cuentas, df_unificado
 
@@ -102,73 +110,53 @@ def homologar_fechas_y_monedas(df):
         try:
             if pd.isna(val) or val == "":
                 return pd.NaT
+            if isinstance(val, bool):
+                return pd.NaT
             if isinstance(val, (int, float)) or (
                 isinstance(val, str) and val.isdigit()
             ):
-                return pd.to_datetime(float(val), unit="s", errors="coerce")
+                return pd.to_datetime(float(val), unit="s", errors="coerce", utc=True).tz_convert("America/Mexico_City")
+            if isinstance(val, str) and len(val) >= 10 and val[2] == "/":
+                return pd.to_datetime(val, dayfirst=True, errors="coerce")
             return pd.to_datetime(val, errors="coerce")
         except Exception:
             return pd.NaT
 
-    df["fecha_dt"] = pd.to_datetime(
-        df["timestamp"].apply(parse_timestamp), errors="coerce"
-    )
-
-    df["fecha_estandar"] = (
-        df["fecha_dt"]
-        .dt.strftime("%Y-%m-%d %H:%M:%S")
-        .fillna("1970-01-01 00:00:00")
-    )
-    df["fecha_corta"] = (
-        df["fecha_dt"].dt.strftime("%Y-%m-%d").fillna("1970-01-01")
-    )
-
-    def a_mxn(row):
-        monto = row["monto_original"]
-        moneda = str(row["moneda"]).upper()
-        if moneda == "USD":
-            return monto * TASA_CAMBIO_USD_MXN
-        return monto
-
-    df["monto_mxn"] = df.apply(a_mxn, axis=1)
+    # Cada fuente puede traer zonas distintas: no inferir toda la columna a partir
+    # del primer formato ni sustituir fechas corruptas con una fecha inventada.
+    fechas = [parse_timestamp(v) for v in df["timestamp"]]
+    df["fecha_dt"] = pd.Series(fechas, index=df.index, dtype=object)
+    df["fecha_estandar"] = [None if pd.isna(v) else v.strftime("%Y-%m-%d %H:%M:%S") for v in fechas]
+    df["fecha_corta"] = [None if pd.isna(v) else v.strftime("%Y-%m-%d") for v in fechas]
+    montos = pd.to_numeric(df["monto_original"], errors="coerce")
+    df["monto_mxn"] = montos * df["moneda"].map({"USD": TASA_CAMBIO_USD_MXN, "MXN": 1.0})
     return df
 
 
 def imputar_faltantes(df):
-    """Fase 2: Imputación de nulos (MCAR/MAR)"""
+    """Respeta la imputación de fase 2: no inventa CLABEs ni repara corrupción."""
     df = df.copy()
-    df["notification_email"] = df["notification_email"].fillna(
-        "sin_correo@banco.com.mx"
-    )
-    df["beneficiary_clabe"] = df["beneficiary_clabe"].fillna(
-        "000000000000000000"
-    )
-
-    mediana_monto = df["monto_mxn"].median()
-    df["monto_mxn"] = df["monto_mxn"].fillna(mediana_monto)
-
+    df["notification_email"] = df["notification_email"].fillna("ANONIMO")
+    df["obs_calidad"] = df["obs_calidad"].fillna("")
     return df
 
 
 def tratar_outliers_iqr(df):
     """Fase 3: Outliers con IQR y Capping / Winsorizing."""
     df = df.copy()
-    df = df[df["monto_mxn"] > 0].copy()
-
-    Q1 = df["monto_mxn"].quantile(0.25)
-    Q3 = df["monto_mxn"].quantile(0.75)
+    montos = pd.to_numeric(df["monto_mxn"], errors="coerce")
+    positivos = montos[(montos > 0) & np.isfinite(montos)]
+    Q1 = positivos.quantile(0.25)
+    Q3 = positivos.quantile(0.75)
     IQR = Q3 - Q1
 
     limite_inferior = Q1 - 1.5 * IQR
     limite_superior = Q3 + 1.5 * IQR
 
-    df["monto_mxn_capped"] = np.where(
-        df["monto_mxn"] > limite_superior,
-        limite_superior,
-        np.where(
-            df["monto_mxn"] < limite_inferior, limite_inferior, df["monto_mxn"]
-        ),
-    )
+    # Cero válido en CONSULTA_SALDO. Los imposibles/corruptos no desaparecen:
+    # se conservan para que fase 6 registre su motivo de rechazo.
+    df["monto_mxn_capped"] = montos.where(~((montos > 0) & np.isfinite(montos)),
+                                         montos.clip(upper=limite_superior))
 
     return df, Q1, Q3, IQR, limite_superior
 
@@ -197,26 +185,6 @@ def cruce_y_detectar_huerfanos(df_transacciones, df_cuentas):
         None,
     )
 
-    return df
-
-
-def transformacion_discretizacion_escalado(df):
-    """Fase 5: Normalización Min-Max [0, 1] y Discretización por Ancho Igual (pd.cut)"""
-    df = df.copy()
-    min_val = df["monto_mxn_capped"].min()
-    max_val = df["monto_mxn_capped"].max()
-
-    if max_val != min_val:
-        df["monto_minmax"] = (df["monto_mxn_capped"] - min_val) / (max_val - min_val)
-    else:
-        df["monto_minmax"] = 0.0
-
-    # Discretización por intervalos de igual tamaño (pd.cut) para mostrar la distribución real sesgada
-    df["nivel_monto"] = pd.cut(
-        df["monto_mxn_capped"],
-        bins=3,
-        labels=["Bajo", "Medio", "Alto"],
-    )
     return df
 
 

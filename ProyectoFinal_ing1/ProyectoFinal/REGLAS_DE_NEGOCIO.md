@@ -13,21 +13,18 @@ Ingeniería de Datos (ATD-2602) · Unidad 2 · TecNM Campus Colima · Ago–Dic 
 
 ## 0. Diagrama de flujo del pipeline (Mockup)
 
-```mermaid
-flowchart TD
-    A1[catalogo_cuentas.csv<br/>Core Bancario] --> F1
-    A2[transacciones_atm.csv<br/>Cajeros] --> F1
-    A3[transferencias_digitales.json<br/>SPEI / App] --> F1
-    F1["FASE 1 · Diagnóstico<br/>completitud · unicidad · dtypes<br/>+ hallazgos de validez"] --> F2
-    F2["FASE 2 · Faltantes<br/>nulos ocultos → NaN · upper()<br/>− 20 reintentos duplicados<br/>MCAR/MAR · mediana por grupo<br/>etiquetas controladas · bitácora"] --> F3
-    F3["FASE 3 · Outliers IQR×1.5<br/>capping / winsorizing<br/>eliminar monto ≤ 0 (excepto CONSULTA_SALDO)"] --> F4
-    F4["FASE 4 · Integración<br/>fechas ISO · USD→MXN @19.50<br/>merge con catálogo · huérfanos"] --> F5
-    F5["FASE 5 · Min-Max [0,1]<br/>discretización Bajo/Medio/Alto"] --> F6
-    F6{"FASE 6 · Pydantic<br/>BaseModel + @field_validator"}
-    F6 -- válido --> T1[(transacciones_limpias)]
-    F6 -- ValidationError --> T2[(cuarentena_errores<br/>motivo_rechazo_cuarentena)]
-    T1 & T2 --> F7["FASE 7 · SQLite<br/>commit / rollback"]
-```
+![Pipeline ETL robusto por fases](reportes/ing3/diagramas/pipeline_robusto_por_fases.png)
+
+[Abrir SVG](reportes/ing3/diagramas/pipeline_robusto_por_fases.svg) ·
+[Fuente Mermaid editable](reportes/ing3/diagramas/pipeline_robusto_por_fases.mmd) ·
+[Visor de los tres diagramas](reportes/ing3/diagramas/ver_diagramas.html)
+
+El diagrama se genera automáticamente con los conteos del lote. Muestra las siete
+fases y el orden real del ejecutor: la homologación de fechas y divisas de fase
+4a precede al IQR de fase 3, para calcular umbrales sobre importes en MXN; después
+fase 4b cruza el catálogo. Los corruptos e imposibles se conservan para validación
+y rechazo auditable en fase 6. Las dos listas llegan juntas a una transacción de
+fase 7: solo un commit confirma ambas tablas; cualquier fallo SQL revierte el lote.
 
 ---
 
@@ -192,9 +189,53 @@ Imputaciones: 27 `monto_mxn` (mediana por tipo), 42 `id_cajero` (`CAJERO_DESCONO
 
 ## 3. FASE 3 – Outliers (IQR / Capping)  *(pendiente)*
 ## 4. FASE 4 – Integración, fechas, divisas y huérfanos  *(Ingeniero/a 2 – pendiente)*
-## 5. FASE 5 – Min-Max y discretización  *(Ingeniero/a 2 – pendiente)*
-## 6. FASE 6 – Pydantic y cuarentena  *(Ingeniero/a 3 – pendiente)*
-## 7. FASE 7 – Carga transaccional a SQLite  *(Ingeniero/a 3 – pendiente)*
+## 5. FASE 5 – Min-Max y discretización *(integración de Ingeniero/a 3)*
+
+**Código:** `src/fase5_transformacion.py`. Se usa el importe `monto_mxn_capped`,
+ya convertido a MXN. Min-Max = `(x - mínimo) / (máximo - mínimo)`, con resultado
+0 para lotes constantes. Se ajusta sobre importes numéricos finitos no negativos
+recibidos de fase 4; se excluyen los corruptos del cálculo, conservando sus filas.
+
+Se eligen terciles por la distribución sesgada de los importes: Bajo si
+`x <= P33`, Medio si `P33 < x <= P67`, Alto si `x > P67`. Los montos iguales
+siempre reciben la misma etiqueta. En lotes pequeños o constantes puede haber
+segmentos vacíos. No se divide por orden de fila para forzar grupos del mismo
+tamaño. Los umbrales y extremos se exportan a `reportes/ing3/resumen_ing3.json`.
+
+## 6. FASE 6 – Pydantic y cuarentena *(Ingeniero/a 3)*
+
+**Código:** `src/modelos_ing3.py`, `src/fase6_validacion.py`.
+
+| ID | Regla | Justificación |
+|---|---|---|
+| R6.1 | `BaseModel` estricto, `extra='forbid'`, números finitos y sin booleanos como importes. | Un dato textual o corrupto no debe convertirse silenciosamente en una transacción conforme. |
+| R6.2 | Identificadores textuales no vacíos; cuenta existente en catálogo; duplicados de identificador desviados a cuarentena. | Evitar llaves inventadas, huérfanos y dobles inserciones. |
+| R6.3 | Fecha ISO válida en calendario, moneda MXN/USD y conversión coherente a 19.50. | Validar también el contrato recibido de las fases anteriores. |
+| R6.4 | Importes positivos en operaciones monetarias; cero únicamente en `CONSULTA_SALDO` ATM; comisión ATM no negativa. | Preservar consultas legítimas y rechazar valores imposibles. |
+| R6.5 | CLABE SPEI como texto con exactamente 18 dígitos ASCII, sin dígito verificador; no aplica a ATM. | Conservar ceros iniciales y respetar el origen sintético de los datos. |
+| R6.6 | Correo con formato válido o `ANONIMO`; CLABE faltante no se imputa. | Respeta R2.6 y R2.7; no inventa datos sensibles. |
+| R6.7 | Cada `ValidationError` conserva causas, posición de fila y contenido recibido. | Trazabilidad sin detener el lote; `entrada = limpias + cuarentena`. |
+
+Los registros con valores imposibles también se conservan en cuarentena para
+auditoría; no llegan a la tabla limpia. La integración conserva las consultas de
+saldo cero, los tipos de operación, las comisiones y las banderas de calidad.
+
+## 7. FASE 7 – Carga transaccional a SQLite *(Ingeniero/a 3)*
+
+**Código:** `src/fase7_base_datos.py`. **Ejecutor:** `run_ing3.py`.
+**Pruebas:** `tests/test_ing3_resiliencia.py`.
+
+Una única transacción guarda `transacciones_limpias` y `cuarentena_errores` con
+INSERT parametrizados. Se ejecuta `conn.commit()` al finalizar las dos cargas;
+ante cualquier excepción, `conn.rollback()` revierte todo. Las conexiones se
+cierran siempre. Las restricciones SQL refuerzan unicidad, nulidad y rangos.
+
+Los ejecutores renuevan las dos tablas de forma atómica, sin acumular filas al
+repetir el lote. Un fallo después de los DELETE restaura el contenido anterior.
+La batería inyecta 20 000 registros (50 % corruptos) y provoca errores SQL reales
+por duplicado y por trigger en cuarentena para demostrar rollback de ambas tablas.
+
+La guía de ejecución, consultas SQL y defensa está en `docs/GUIA_ING3.md`.
 
 ### Decisiones de equipo abiertas (detectadas en la Fase 1)
 1. ¿Las comisiones cobradas en `FALLO_CONEXION` (92) van a cuarentena o solo se marcan?

@@ -1,0 +1,44 @@
+classDiagram
+direction TB
+class BaseModel {
++model_validate(datos, context)
++model_dump() dict
+}
+BaseModel <|-- TransaccionLimpia
+class TransaccionLimpia {
++str transaccion_id
++str account_id
++str tipo_origen
++str fecha_corta
++str moneda
++float monto_original
++float monto_mxn
++float monto_mxn_capped
++float monto_minmax
++str nivel_monto
++str notification_email
++str_o_None beneficiary_clabe
++str_o_None tipo_operacion
++float_o_None comision_aplicada
++bool es_huerfano
++str obs_calidad
++str datos_origen_json
++identificador_valido(...)
++fecha_iso(...)
++correo_valido(...)
++clabe_valida(...)
++sin_huerfanos(...)
++sin_booleanos_numericos(...)
++sin_corrupcion_previa(...)
++coherencia_negocio(...)
+}
+BaseModel <|-- RegistroCuarentena
+class RegistroCuarentena {
++int numero_fila
++str_o_None transaccion_id
++str_o_None tipo_origen
++str motivo_rechazo_cuarentena
++str errores_validacion_json
++str registro_original_json
+}
+note for RegistroCuarentena "Se crea al capturar ValidationError; conserva causas y registro original."

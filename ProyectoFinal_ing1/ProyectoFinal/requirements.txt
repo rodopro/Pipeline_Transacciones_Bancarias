@@ -5,4 +5,5 @@ matplotlib>=3.7
 missingno>=0.5
 scikit-learn>=1.2
 pytest>=7.0
+pydantic>=2.0,<3.0
 jupyter

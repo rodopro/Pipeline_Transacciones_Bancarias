@@ -1,0 +1,13 @@
+flowchart TD
+    A["ATM CSV + transferencias JSON de fase 2"] --> I["Integracion: fechas, moneda, IQR y huerfanos"]
+    C["Catalogo de cuentas"] --> I
+    C --> V
+    I --> T["Fase 5: monto_minmax y nivel_monto"]
+    T --> V["Fase 6: TransaccionLimpia.model_validate por fila"]
+    V -->|Valido| L["list de TransaccionLimpia: 1,072"]
+    V -->|except ValidationError| Q["list de RegistroCuarentena: 128"]
+    L --> B["Fase 7: una transaccion SQLite para ambas tablas"]
+    Q --> B
+    B -->|Todo correcto| COMMIT["commit: transacciones_limpias y cuarentena_errores"]
+    B -->|Error SQL| R["rollback del lote completo"]
+    COMMIT --> S["CSV, resumen JSON y diagramas visuales"]

@@ -1,0 +1,27 @@
+flowchart TD
+    A["datasets/transacciones_atm.csv"] --> F1
+    B["datasets/transferencias_digitales.json"] --> F1
+    C["datasets/catalogo_cuentas.csv"] --> F1
+    F1["FASE 1 · Diagnostico: completitud, unicidad, tipos y validez"] --> F2
+    F2["FASE 2 · MCAR/MAR, medianas, etiquetas, reintentos y trazabilidad"] --> F4A
+    F4A["FASE 4a · Unir fuentes, fechas ISO y USD a MXN a 19.50"] --> F3
+    F3["FASE 3 · IQR y capping en MXN; conservar consultas de saldo cero"] --> F4B
+    F4B["FASE 4b · Cruce con catalogo; marcar cuentas huerfanas"] --> F5
+    F5["FASE 5 · Min-Max 0 a 1 y terciles Bajo, Medio, Alto"] --> F6
+    F6["FASE 6 · BaseModel, field_validator y model_validator por fila"] --> D
+    D{"Cumple esquema y reglas?"} -->|Si| L["list TransaccionLimpia: 1,072"]
+    D -->|except ValidationError| Q["list RegistroCuarentena: 128 · causas y registro recibido"]
+    L --> F7
+    Q --> F7
+    F7["FASE 7 · BEGIN IMMEDIATE e INSERT parametrizados en ambas tablas"] --> SQL
+    SQL{"Ambas cargas sin error SQL?"} -->|Si| OK["conn.commit: confirmar ambas tablas"]
+    SQL -->|No| ERROR["conn.rollback: revertir el lote completo"]
+    OK --> DB[("SQLite: transacciones_limpias y cuarentena_errores")]
+    DB --> OUT["CSV, resumen JSON, integridad y diagramas"]
+    ERROR --> FIN["Conservar contenido previo y reportar fallo de persistencia"]
+    classDef fase fill:#edf3ff,stroke:#2557a7,color:#19283f
+    classDef valido fill:#effaf4,stroke:#15734c,color:#15734c
+    classDef rechazo fill:#fff3f3,stroke:#ad3442,color:#ad3442
+    class F1,F2,F4A,F3,F4B,F5,F6,F7 fase
+    class L,OK,DB,OUT valido
+    class Q,ERROR,FIN rechazo

@@ -1,0 +1,718 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1368pt" height="2469.6pt" viewBox="0 0 1368 2469.6" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-27T16:35:43.393098</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 2469.6 
+L 1368 2469.6 
+L 1368 0 
+L 0 0 
+z
+" style="fill: #f5f8fc"/>
+  </g>
+  <g id="axes_1">
+   <g id="line2d_1">
+    <path d="M 237.6 244.8 
+L 237.6 280.8 
+" clip-path="url(#p79a6f4dcf9)" style="fill: none; stroke: #2557a7; stroke-width: 2.1; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 237.6 280.8 
+L 684 280.8 
+" clip-path="url(#p79a6f4dcf9)" style="fill: none; stroke: #2557a7; stroke-width: 2.1; stroke-linecap: square"/>
+   </g>
+   <g id="patch_2">
+    <path d="M 684 280.8 
+Q 684 294.199805 684 305.251738 
+" clip-path="url(#p79a6f4dcf9)" style="fill: none; stroke: #2557a7; stroke-width: 2.1; stroke-linecap: round"/>
+    <path d="M 687.4 298.451738 
+L 684 305.251738 
+L 680.6 298.451738 
+z
+" clip-path="url(#p79a6f4dcf9)" style="fill: #2557a7; stroke: #2557a7; stroke-width: 2.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 684 244.8 
+Q 684 276.201343 684 305.254814 
+" clip-path="url(#p79a6f4dcf9)" style="fill: none; stroke: #2557a7; stroke-width: 2.1; stroke-linecap: round"/>
+    <path d="M 687.4 298.454814 
+L 684 305.254814 
+L 680.6 298.454814 
+z
+" clip-path="url(#p79a6f4dcf9)" style="fill: #2557a7; stroke: #2557a7; stroke-width: 2.1; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_3">
+    <path d="M 1130.4 244.8 
+L 1130.4 280.8 
+" clip-path="url(#p79a6f4dcf9)" style="fill: none; stroke: #2557a7; stroke-width: 2.1; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_4">
+    <path d="M 1130.4 280.8 
+L 684 280.8 
+" clip-path="url(#p79a6f4dcf9)" style="fill: none; stroke: #2557a7; stroke-width: 2.1; stroke-linecap: square"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 684 280.8 
+Q 684 294.199805 684 305.251738 
+" clip-path="url(#p79a6f4dcf9)" style="fill: none; stroke: #2557a7; stroke-width: 2.1; stroke-linecap: round"/>
+    <path d="M 687.4 298.451738 
+L 684 305.251738 
+L 680.6 298.451738 
+z
+" clip-path="url(#p79a6f4dcf9)" style="fill: #2557a7; stroke: #2557a7; stroke-width: 2.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 684 428.4 
+Q 684 447.201782 684 463.655693 
+" clip-path="url(#p79a6f4dcf9)" style="fill: none; stroke: #2557a7; stroke-width: 2.1; stroke-linecap: round"/>
+    <path d="M 687.4 456.855693 
+L 684 463.655693 
+L 680.6 456.855693 
+z
+" clip-path="url(#p79a6f4dcf9)" style="fill: #2557a7; stroke: #2557a7; stroke-width: 2.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 684 615.6 
+Q 684 634.401782 684 650.855693 
+" clip-path="url(#p79a6f4dcf9)" style="fill: none; stroke: #2557a7; stroke-width: 2.1; stroke-linecap: round"/>
+    <path d="M 687.4 644.055693 
+L 684 650.855693 
+L 680.6 644.055693 
+z
+" clip-path="url(#p79a6f4dcf9)" style="fill: #2557a7; stroke: #2557a7; stroke-width: 2.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 684 770.4 
+Q 684 789.201782 684 805.655693 
+" clip-path="url(#p79a6f4dcf9)" style="fill: none; stroke: #2557a7; stroke-width: 2.1; stroke-linecap: round"/>
+    <path d="M 687.4 798.855693 
+L 684 805.655693 
+L 680.6 798.855693 
+z
+" clip-path="url(#p79a6f4dcf9)" style="fill: #2557a7; stroke: #2557a7; stroke-width: 2.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 684 939.6 
+Q 684 958.401782 684 974.855693 
+" clip-path="url(#p79a6f4dcf9)" style="fill: none; stroke: #2557a7; stroke-width: 2.1; stroke-linecap: round"/>
+    <path d="M 687.4 968.055693 
+L 684 974.855693 
+L 680.6 968.055693 
+z
+" clip-path="url(#p79a6f4dcf9)" style="fill: #2557a7; stroke: #2557a7; stroke-width: 2.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 684 1087.2 
+Q 684 1106.001782 684 1122.455693 
+" clip-path="url(#p79a6f4dcf9)" style="fill: none; stroke: #2557a7; stroke-width: 2.1; stroke-linecap: round"/>
+    <path d="M 687.4 1115.655693 
+L 684 1122.455693 
+L 680.6 1115.655693 
+z
+" clip-path="url(#p79a6f4dcf9)" style="fill: #2557a7; stroke: #2557a7; stroke-width: 2.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 684 1242 
+Q 684 1260.801782 684 1277.255693 
+" clip-path="url(#p79a6f4dcf9)" style="fill: none; stroke: #2557a7; stroke-width: 2.1; stroke-linecap: round"/>
+    <path d="M 687.4 1270.455693 
+L 684 1277.255693 
+L 680.6 1270.455693 
+z
+" clip-path="url(#p79a6f4dcf9)" style="fill: #2557a7; stroke: #2557a7; stroke-width: 2.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 684 1422 
+Q 684 1439.000244 684 1453.652617 
+" clip-path="url(#p79a6f4dcf9)" style="fill: none; stroke: #2557a7; stroke-width: 2.1; stroke-linecap: round"/>
+    <path d="M 687.4 1446.852617 
+L 684 1453.652617 
+L 680.6 1446.852617 
+z
+" clip-path="url(#p79a6f4dcf9)" style="fill: #2557a7; stroke: #2557a7; stroke-width: 2.1; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_5">
+    <path d="M 496.8 1519.2 
+L 338.4 1519.2 
+" clip-path="url(#p79a6f4dcf9)" style="fill: none; stroke: #15734c; stroke-width: 2.1; stroke-linecap: square"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 338.4 1519.2 
+Q 338.4 1583.001343 338.4 1644.454814 
+" clip-path="url(#p79a6f4dcf9)" style="fill: none; stroke: #15734c; stroke-width: 2.1; stroke-linecap: round"/>
+    <path d="M 341.8 1637.654814 
+L 338.4 1644.454814 
+L 335 1637.654814 
+z
+" clip-path="url(#p79a6f4dcf9)" style="fill: #15734c; stroke: #15734c; stroke-width: 2.1; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_6">
+    <path d="M 871.2 1519.2 
+L 1029.6 1519.2 
+" clip-path="url(#p79a6f4dcf9)" style="fill: none; stroke: #ad3442; stroke-width: 2.1; stroke-linecap: square"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 1029.6 1519.2 
+Q 1029.6 1583.001343 1029.6 1644.454814 
+" clip-path="url(#p79a6f4dcf9)" style="fill: none; stroke: #ad3442; stroke-width: 2.1; stroke-linecap: round"/>
+    <path d="M 1033 1637.654814 
+L 1029.6 1644.454814 
+L 1026.2 1637.654814 
+z
+" clip-path="url(#p79a6f4dcf9)" style="fill: #ad3442; stroke: #ad3442; stroke-width: 2.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 338.4 1807.2 
+Q 338.4 1831.398706 338.4 1853.249541 
+" clip-path="url(#p79a6f4dcf9)" style="fill: none; stroke: #15734c; stroke-width: 2.1; stroke-linecap: round"/>
+    <path d="M 341.8 1846.449541 
+L 338.4 1853.249541 
+L 335 1846.449541 
+z
+" clip-path="url(#p79a6f4dcf9)" style="fill: #15734c; stroke: #15734c; stroke-width: 2.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 1029.6 1807.2 
+Q 1029.6 1831.398706 1029.6 1853.249541 
+" clip-path="url(#p79a6f4dcf9)" style="fill: none; stroke: #ad3442; stroke-width: 2.1; stroke-linecap: round"/>
+    <path d="M 1033 1846.449541 
+L 1029.6 1853.249541 
+L 1026.2 1846.449541 
+z
+" clip-path="url(#p79a6f4dcf9)" style="fill: #ad3442; stroke: #ad3442; stroke-width: 2.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 684 1980 
+Q 684 2002.398816 684 2022.44976 
+" clip-path="url(#p79a6f4dcf9)" style="fill: none; stroke: #2557a7; stroke-width: 2.1; stroke-linecap: round"/>
+    <path d="M 687.4 2015.64976 
+L 684 2022.44976 
+L 680.6 2015.64976 
+z
+" clip-path="url(#p79a6f4dcf9)" style="fill: #2557a7; stroke: #2557a7; stroke-width: 2.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_17">
+    <path d="M 504 2095.2 
+Q 476.200195 2095.2 450.748262 2095.2 
+" clip-path="url(#p79a6f4dcf9)" style="fill: none; stroke: #15734c; stroke-width: 2.1; stroke-linecap: round"/>
+    <path d="M 457.548262 2098.6 
+L 450.748262 2095.2 
+L 457.548262 2091.8 
+z
+" clip-path="url(#p79a6f4dcf9)" style="fill: #15734c; stroke: #15734c; stroke-width: 2.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_18">
+    <path d="M 864 2095.2 
+Q 891.799805 2095.2 917.251738 2095.2 
+" clip-path="url(#p79a6f4dcf9)" style="fill: none; stroke: #ad3442; stroke-width: 2.1; stroke-linecap: round"/>
+    <path d="M 910.451738 2091.8 
+L 917.251738 2095.2 
+L 910.451738 2098.6 
+z
+" clip-path="url(#p79a6f4dcf9)" style="fill: #ad3442; stroke: #ad3442; stroke-width: 2.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_19">
+    <path d="M 244.8 2160 
+Q 244.8 2195.000244 244.8 2227.652617 
+" clip-path="url(#p79a6f4dcf9)" style="fill: none; stroke: #15734c; stroke-width: 2.1; stroke-linecap: round"/>
+    <path d="M 248.2 2220.852617 
+L 244.8 2227.652617 
+L 241.4 2220.852617 
+z
+" clip-path="url(#p79a6f4dcf9)" style="fill: #15734c; stroke: #15734c; stroke-width: 2.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_20">
+    <path d="M 1123.2 2160 
+Q 1123.2 2195.000244 1123.2 2227.652617 
+" clip-path="url(#p79a6f4dcf9)" style="fill: none; stroke: #ad3442; stroke-width: 2.1; stroke-linecap: round"/>
+    <path d="M 1126.6 2220.852617 
+L 1123.2 2227.652617 
+L 1119.8 2220.852617 
+z
+" clip-path="url(#p79a6f4dcf9)" style="fill: #ad3442; stroke: #ad3442; stroke-width: 2.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_21">
+    <path d="M 53.28 136.8 
+L 421.92 136.8 
+Q 432 136.8 432 146.88 
+L 432 234.72 
+Q 432 244.8 421.92 244.8 
+L 53.28 244.8 
+Q 43.2 244.8 43.2 234.72 
+L 43.2 146.88 
+Q 43.2 136.8 53.28 136.8 
+z
+" clip-path="url(#p79a6f4dcf9)" style="fill: #edf3ff; stroke: #2557a7; stroke-width: 1.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_22">
+    <path d="M 499.68 136.8 
+L 868.32 136.8 
+Q 878.4 136.8 878.4 146.88 
+L 878.4 234.72 
+Q 878.4 244.8 868.32 244.8 
+L 499.68 244.8 
+Q 489.6 244.8 489.6 234.72 
+L 489.6 146.88 
+Q 489.6 136.8 499.68 136.8 
+z
+" clip-path="url(#p79a6f4dcf9)" style="fill: #edf3ff; stroke: #2557a7; stroke-width: 1.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_23">
+    <path d="M 946.08 136.8 
+L 1314.72 136.8 
+Q 1324.8 136.8 1324.8 146.88 
+L 1324.8 234.72 
+Q 1324.8 244.8 1314.72 244.8 
+L 946.08 244.8 
+Q 936 244.8 936 234.72 
+L 936 146.88 
+Q 936 136.8 946.08 136.8 
+z
+" clip-path="url(#p79a6f4dcf9)" style="fill: #edf3ff; stroke: #2557a7; stroke-width: 1.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_24">
+    <path d="M 254.88 309.6 
+L 1113.12 309.6 
+Q 1123.2 309.6 1123.2 319.68 
+L 1123.2 418.32 
+Q 1123.2 428.4 1113.12 428.4 
+L 254.88 428.4 
+Q 244.8 428.4 244.8 418.32 
+L 244.8 319.68 
+Q 244.8 309.6 254.88 309.6 
+z
+" clip-path="url(#p79a6f4dcf9)" style="fill: #ffffff; stroke: #2557a7; stroke-width: 1.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_25">
+    <path d="M 254.88 468 
+L 1113.12 468 
+Q 1123.2 468 1123.2 478.08 
+L 1123.2 605.52 
+Q 1123.2 615.6 1113.12 615.6 
+L 254.88 615.6 
+Q 244.8 615.6 244.8 605.52 
+L 244.8 478.08 
+Q 244.8 468 254.88 468 
+z
+" clip-path="url(#p79a6f4dcf9)" style="fill: #ffffff; stroke: #2557a7; stroke-width: 1.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_26">
+    <path d="M 254.88 655.2 
+L 1113.12 655.2 
+Q 1123.2 655.2 1123.2 665.28 
+L 1123.2 760.32 
+Q 1123.2 770.4 1113.12 770.4 
+L 254.88 770.4 
+Q 244.8 770.4 244.8 760.32 
+L 244.8 665.28 
+Q 244.8 655.2 254.88 655.2 
+z
+" clip-path="url(#p79a6f4dcf9)" style="fill: #ffffff; stroke: #2557a7; stroke-width: 1.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_27">
+    <path d="M 254.88 810 
+L 1113.12 810 
+Q 1123.2 810 1123.2 820.08 
+L 1123.2 929.52 
+Q 1123.2 939.6 1113.12 939.6 
+L 254.88 939.6 
+Q 244.8 939.6 244.8 929.52 
+L 244.8 820.08 
+Q 244.8 810 254.88 810 
+z
+" clip-path="url(#p79a6f4dcf9)" style="fill: #ffffff; stroke: #2557a7; stroke-width: 1.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_28">
+    <path d="M 254.88 979.2 
+L 1113.12 979.2 
+Q 1123.2 979.2 1123.2 989.28 
+L 1123.2 1077.12 
+Q 1123.2 1087.2 1113.12 1087.2 
+L 254.88 1087.2 
+Q 244.8 1087.2 244.8 1077.12 
+L 244.8 989.28 
+Q 244.8 979.2 254.88 979.2 
+z
+" clip-path="url(#p79a6f4dcf9)" style="fill: #ffffff; stroke: #2557a7; stroke-width: 1.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_29">
+    <path d="M 254.88 1126.8 
+L 1113.12 1126.8 
+Q 1123.2 1126.8 1123.2 1136.88 
+L 1123.2 1231.92 
+Q 1123.2 1242 1113.12 1242 
+L 254.88 1242 
+Q 244.8 1242 244.8 1231.92 
+L 244.8 1136.88 
+Q 244.8 1126.8 254.88 1126.8 
+z
+" clip-path="url(#p79a6f4dcf9)" style="fill: #ffffff; stroke: #2557a7; stroke-width: 1.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_30">
+    <path d="M 254.88 1281.6 
+L 1113.12 1281.6 
+Q 1123.2 1281.6 1123.2 1291.68 
+L 1123.2 1411.92 
+Q 1123.2 1422 1113.12 1422 
+L 254.88 1422 
+Q 244.8 1422 244.8 1411.92 
+L 244.8 1291.68 
+Q 244.8 1281.6 254.88 1281.6 
+z
+" clip-path="url(#p79a6f4dcf9)" style="fill: #ffffff; stroke: #2557a7; stroke-width: 1.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_31">
+    <path d="M 53.28 468 
+L 198.72 468 
+Q 208.8 468 208.8 478.08 
+L 208.8 605.52 
+Q 208.8 615.6 198.72 615.6 
+L 53.28 615.6 
+Q 43.2 615.6 43.2 605.52 
+L 43.2 478.08 
+Q 43.2 468 53.28 468 
+z
+" clip-path="url(#p79a6f4dcf9)" style="fill: #fffdf3; stroke: #d2dce9; stroke-width: 1.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_32">
+    <path d="M 1176.48 979.2 
+L 1314.72 979.2 
+Q 1324.8 979.2 1324.8 989.28 
+L 1324.8 1102.32 
+Q 1324.8 1112.4 1314.72 1112.4 
+L 1176.48 1112.4 
+Q 1166.4 1112.4 1166.4 1102.32 
+L 1166.4 989.28 
+Q 1166.4 979.2 1176.48 979.2 
+z
+" clip-path="url(#p79a6f4dcf9)" style="fill: #fff3f3; stroke: #ad3442; stroke-width: 1.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_33">
+    <path d="M 684 1458 
+L 871.2 1519.2 
+L 684 1580.4 
+L 496.8 1519.2 
+z
+" clip-path="url(#p79a6f4dcf9)" style="fill: #edf3ff; stroke: #2557a7; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_34">
+    <path d="M 53.28 1648.8 
+L 623.52 1648.8 
+Q 633.6 1648.8 633.6 1658.88 
+L 633.6 1797.12 
+Q 633.6 1807.2 623.52 1807.2 
+L 53.28 1807.2 
+Q 43.2 1807.2 43.2 1797.12 
+L 43.2 1658.88 
+Q 43.2 1648.8 53.28 1648.8 
+z
+" clip-path="url(#p79a6f4dcf9)" style="fill: #effaf4; stroke: #15734c; stroke-width: 1.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_35">
+    <path d="M 744.48 1648.8 
+L 1314.72 1648.8 
+Q 1324.8 1648.8 1324.8 1658.88 
+L 1324.8 1797.12 
+Q 1324.8 1807.2 1314.72 1807.2 
+L 744.48 1807.2 
+Q 734.4 1807.2 734.4 1797.12 
+L 734.4 1658.88 
+Q 734.4 1648.8 744.48 1648.8 
+z
+" clip-path="url(#p79a6f4dcf9)" style="fill: #fff3f3; stroke: #ad3442; stroke-width: 1.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_36">
+    <path d="M 254.88 1857.6 
+L 1113.12 1857.6 
+Q 1123.2 1857.6 1123.2 1867.68 
+L 1123.2 1969.92 
+Q 1123.2 1980 1113.12 1980 
+L 254.88 1980 
+Q 244.8 1980 244.8 1969.92 
+L 244.8 1867.68 
+Q 244.8 1857.6 254.88 1857.6 
+z
+" clip-path="url(#p79a6f4dcf9)" style="fill: #edf3ff; stroke: #2557a7; stroke-width: 1.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_37">
+    <path d="M 684 2026.8 
+L 864 2095.2 
+L 684 2163.6 
+L 504 2095.2 
+z
+" clip-path="url(#p79a6f4dcf9)" style="fill: #edf3ff; stroke: #2557a7; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_38">
+    <path d="M 53.28 2030.4 
+L 436.32 2030.4 
+Q 446.4 2030.4 446.4 2040.48 
+L 446.4 2149.92 
+Q 446.4 2160 436.32 2160 
+L 53.28 2160 
+Q 43.2 2160 43.2 2149.92 
+L 43.2 2040.48 
+Q 43.2 2030.4 53.28 2030.4 
+z
+" clip-path="url(#p79a6f4dcf9)" style="fill: #effaf4; stroke: #15734c; stroke-width: 1.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_39">
+    <path d="M 931.68 2030.4 
+L 1314.72 2030.4 
+Q 1324.8 2030.4 1324.8 2040.48 
+L 1324.8 2149.92 
+Q 1324.8 2160 1314.72 2160 
+L 931.68 2160 
+Q 921.6 2160 921.6 2149.92 
+L 921.6 2040.48 
+Q 921.6 2030.4 931.68 2030.4 
+z
+" clip-path="url(#p79a6f4dcf9)" style="fill: #fff3f3; stroke: #ad3442; stroke-width: 1.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_40">
+    <path d="M 53.28 2232 
+L 810.72 2232 
+Q 820.8 2232 820.8 2242.08 
+L 820.8 2351.52 
+Q 820.8 2361.6 810.72 2361.6 
+L 53.28 2361.6 
+Q 43.2 2361.6 43.2 2351.52 
+L 43.2 2242.08 
+Q 43.2 2232 53.28 2232 
+z
+" clip-path="url(#p79a6f4dcf9)" style="fill: #ffffff; stroke: #15734c; stroke-width: 1.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_41">
+    <path d="M 931.68 2232 
+L 1314.72 2232 
+Q 1324.8 2232 1324.8 2242.08 
+L 1324.8 2351.52 
+Q 1324.8 2361.6 1314.72 2361.6 
+L 931.68 2361.6 
+Q 921.6 2361.6 921.6 2351.52 
+L 921.6 2242.08 
+Q 921.6 2232 931.68 2232 
+z
+" clip-path="url(#p79a6f4dcf9)" style="fill: #ffffff; stroke: #ad3442; stroke-width: 1.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #2557a7" x="43.2" y="37.021562" transform="rotate(-0 43.2 37.021562)">PROYECTO FINAL  /  PIPELINE ETL ROBUSTO</text>
+   </g>
+   <g id="text_2">
+    <text style="font-weight: 700; font-size: 26px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #19283f" x="43.2" y="76.354375" transform="rotate(-0 43.2 76.354375)">Pipeline robusto por fases</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52637a" x="43.2" y="98.95125" transform="rotate(-0 43.2 98.95125)">Recorrido completo desde datos crudos hasta SQLite. Los conteos corresponden al último lote validado.</text>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #2557a7" x="60.48" y="164.473203" transform="rotate(-0 60.48 164.473203)">CAJEROS ATM</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #19283f" x="60.48" y="191.852344" transform="rotate(-0 60.48 191.852344)">transacciones_atm.csv</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52637a" x="60.48" y="219.365313" transform="rotate(-0 60.48 219.365313)">Reintentos, nulos y fechas mixtas</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #2557a7" x="506.88" y="165.170938" transform="rotate(-0 506.88 165.170938)">SPEI / APP</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #19283f" x="506.88" y="191.881562" transform="rotate(-0 506.88 191.881562)">transferencias_digitales.json</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52637a" x="506.88" y="219.268203" transform="rotate(-0 506.88 219.268203)">USD/MXN, CLABEs y correos</text>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #2557a7" x="953.28" y="165.681797" transform="rotate(-0 953.28 165.681797)">CORE BANCARIO</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #19283f" x="953.28" y="191.881562" transform="rotate(-0 953.28 191.881562)">catalogo_cuentas.csv</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52637a" x="953.28" y="219.585312" transform="rotate(-0 953.28 219.585312)">Catálogo maestro de cuentas</text>
+   </g>
+   <g id="text_13">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #2557a7" x="264.96" y="339.685312" transform="rotate(-0 264.96 339.685312)">FASE 1  ·  DIAGNÓSTICO DE CALIDAD</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(264.96 366.55125)">Carga segura de CSV y JSON; identificadores y CLABEs se conservan como texto.</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(264.96 384.55125)">Completitud, nulos ocultos, duplicados, tipos inferidos y hallazgos de validez.</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(264.96 402.55125)">Salida: perfiles de calidad antes de transformar los datos.</text>
+   </g>
+   <g id="text_15">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #2557a7" x="264.96" y="497.254531" transform="rotate(-0 264.96 497.254531)">FASE 2  ·  FALTANTES, IMPUTACIÓN Y DUPLICADOS</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(264.96 525.19125)">Nulos disfrazados → nulos reales; etiquetas homogéneas; MCAR/MAR.</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(264.96 542.95125)">Eliminar solo reintentos exactos; imputar medianas por grupo y etiquetas controladas.</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(264.96 561.024375)">No imputar llaves ni corrupción: guardar obs_calidad y banderas de imputación.</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(264.96 579.19125)">Salida: tres archivos de fase 2 en data/interim/ y bitácora de cambios.</text>
+   </g>
+   <g id="text_17">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #2557a7" x="264.96" y="685.285312" transform="rotate(-0 264.96 685.285312)">FASE 4a  ·  INTEGRACIÓN INICIAL Y HOMOLOGACIÓN</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(264.96 712.15125)">Unir ATM + SPEI; homologar fechas ISO; convertir USD → MXN a 19.50.</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(264.96 730.15125)">Se hace antes del IQR para comparar importes en la misma moneda.</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(264.96 748.15125)">Conservar operaciones, comisiones y trazabilidad de las fases anteriores.</text>
+   </g>
+   <g id="text_19">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #2557a7" x="264.96" y="838.025625" transform="rotate(-0 264.96 838.025625)">FASE 3  ·  OUTLIERS CON IQR Y CAPPING</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(264.96 866.95125)">Calcular Q1, Q3 e IQR con importes positivos y finitos en MXN.</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(264.96 884.784375)">Recortar extremos superiores a Q3 + 1.5 × IQR → monto_mxn_capped.</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(264.96 902.784375)">Conservar CONSULTA_SALDO con importe cero.</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(264.96 920.95125)">Los importes imposibles o corruptos siguen presentes para rechazo auditable.</text>
+   </g>
+   <g id="text_21">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #2557a7" x="264.96" y="1009.285312" transform="rotate(-0 264.96 1009.285312)">FASE 4b  ·  CRUCE CON EL CATÁLOGO MAESTRO</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(264.96 1035.984375)">Comparar account_id contra las cuentas registradas en Core Bancario.</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(264.96 1054.224375)">Marcar es_huerfano y su causa, conservando la fila hasta la validación.</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(264.96 1072.39125)">Salida: DataFrame integrado y conjunto de cuentas válidas.</text>
+   </g>
+   <g id="text_23">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #2557a7" x="264.96" y="1156.054531" transform="rotate(-0 264.96 1156.054531)">FASE 5  ·  TRANSFORMACIÓN, DISCRETIZACIÓN Y ESCALAMIENTO</text>
+   </g>
+   <g id="text_24">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(264.96 1183.584375)">Min-Max sobre monto_mxn_capped → monto_minmax en [0, 1].</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(264.96 1201.584375)">Terciles por importe → nivel_monto: Bajo, Medio o Alto.</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(264.96 1219.99125)">Registrar mínimo, máximo y cuantiles; tratar lotes vacíos, constantes y empates.</text>
+   </g>
+   <g id="text_25">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #2557a7" x="264.96" y="1311.685313" transform="rotate(-0 264.96 1311.685313)">FASE 6  ·  PYDANTIC Y SEGREGACIÓN POR FILA</text>
+   </g>
+   <g id="text_26">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(264.96 1338.384375)">TransaccionLimpia.model_validate(datos, context=...) dentro de try/except.</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(264.96 1356.55125)">Tipos estrictos; fecha, cuenta, duplicados, CLABE, correo e importes.</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(264.96 1374.384375)">@field_validator + @model_validator: comprobar coherencia de negocio.</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(264.96 1392.79125)">Contexto: cuentas válidas del catálogo e identificadores ya aceptados.</text>
+   </g>
+   <g id="text_27">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #19283f" x="59.04" y="496.425313" transform="rotate(-0 59.04 496.425313)">TRAZABILIDAD</text>
+   </g>
+   <g id="text_28">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #52637a" transform="translate(59.04 524.277969)">Bitácora, banderas</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #52637a" transform="translate(59.04 538.619375)">y registro original.</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #52637a" transform="translate(59.04 554.434219)">Los errores se</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #52637a" transform="translate(59.04 569.588125)">conservan durante</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #52637a" transform="translate(59.04 584.588125)">las transformaciones.</text>
+   </g>
+   <g id="text_29">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #ad3442" x="1182.24" y="1007.105625" transform="rotate(-0 1182.24 1007.105625)">HUÉRFANOS</text>
+   </g>
+   <g id="text_30">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #52637a" transform="translate(1182.24 1034.299375)">Aquí se marcan.</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #52637a" transform="translate(1182.24 1050.068125)">En fase 6 se</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #52637a" transform="translate(1182.24 1064.299375)">validan y desvían</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #52637a" transform="translate(1182.24 1079.779844)">a cuarentena.</text>
+   </g>
+   <g id="text_31">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; fill: #2557a7" transform="translate(646.955625 1499.11125)">¿Cumple el</text>
+    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; fill: #2557a7" transform="translate(635.656875 1517.064375)">esquema y las</text>
+    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; fill: #2557a7" transform="translate(620.483438 1535.064375)">reglas de negocio?</text>
+   </g>
+   <g id="text_32">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #15734c" x="316.8" y="1555.512187" transform="rotate(-0 316.8 1555.512187)">SÍ · modelo válido</text>
+   </g>
+   <g id="text_33">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #ad3442" x="1051.2" y="1554.590938" transform="rotate(-0 1051.2 1554.590938)">NO · ValidationError</text>
+   </g>
+   <g id="text_34">
+    <text style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #15734c" x="63.36" y="1684.261406" transform="rotate(-0 63.36 1684.261406)">1,072 REGISTROS APTOS</text>
+   </g>
+   <g id="text_35">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(63.36 1715.11125)">list[TransaccionLimpia]</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(63.36 1732.944375)">Campos validados + variables derivadas + datos_origen_json.</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(63.36 1750.944375)">Preparados para la tabla transacciones_limpias.</text>
+   </g>
+   <g id="text_36">
+    <text style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #ad3442" x="754.56" y="1685.411719" transform="rotate(-0 754.56 1685.411719)">128 REGISTROS EN CUARENTENA</text>
+   </g>
+   <g id="text_37">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(754.56 1715.11125)">list[RegistroCuarentena]</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(754.56 1733.11125)">Fila, identificador, motivo, errores y registro recibido.</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(754.56 1751.11125)">El error de una fila permite continuar con la siguiente.</text>
+   </g>
+   <g id="text_38">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #2557a7" x="264.96" y="1887.921797" transform="rotate(-0 264.96 1887.921797)">FASE 7  ·  CARGA TRANSACCIONAL DE AMBAS LISTAS</text>
+   </g>
+   <g id="text_39">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(264.96 1917.264375)">BEGIN IMMEDIATE → INSERT parametrizados en transacciones_limpias y cuarentena_errores.</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(264.96 1935.67125)">Los ejecutores reemplazan ambas tablas dentro de la misma transacción.</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(264.96 1953.67125)">Un fallo en la segunda tabla también debe revertir los cambios de la primera.</text>
+   </g>
+   <g id="text_40">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; fill: #2557a7" transform="translate(639.779063 2074.958437)">¿Se cargaron</text>
+    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; fill: #2557a7" transform="translate(638.806875 2094.27375)">ambas tablas</text>
+    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; fill: #2557a7" transform="translate(636.129375 2111.483437)">sin error SQL?</text>
+   </g>
+   <g id="text_41">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #15734c" x="475.2" y="2083.992188" transform="rotate(-0 475.2 2083.992188)">SÍ</text>
+   </g>
+   <g id="text_42">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ad3442" x="892.8" y="2082.973828" transform="rotate(-0 892.8 2082.973828)">NO</text>
+   </g>
+   <g id="text_43">
+    <text style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #15734c" x="63.36" y="2067.551719" transform="rotate(-0 63.36 2067.551719)">conn.commit()</text>
+   </g>
+   <g id="text_44">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(63.36 2100.99375)">Se confirma la transacción.</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(63.36 2117.59125)">Ambas tablas quedan persistidas.</text>
+   </g>
+   <g id="text_45">
+    <text style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #ad3442" x="941.76" y="2067.551719" transform="rotate(-0 941.76 2067.551719)">conn.rollback()</text>
+   </g>
+   <g id="text_46">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(941.76 2100.75375)">Se revierte TODO el lote.</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(941.76 2117.59125)">Se conserva el contenido previo.</text>
+   </g>
+   <g id="text_47">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #15734c" x="63.36" y="2263.041797" transform="rotate(-0 63.36 2263.041797)">SALIDAS CONFIRMADAS</text>
+   </g>
+   <g id="text_48">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(63.36 2291.664375)">data/proyecto_final.sqlite3: transacciones_limpias + cuarentena_errores.</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(63.36 2309.83125)">reportes/ing3/: CSV, resumen JSON, evidencia y diagramas.</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(63.36 2327.904375)">PRAGMA integrity_check: verificación de integridad de SQLite.</text>
+   </g>
+   <g id="text_49">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #ad3442" x="941.76" y="2263.041797" transform="rotate(-0 941.76 2263.041797)">LOTE NO CONFIRMADO</text>
+   </g>
+   <g id="text_50">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(941.76 2291.83125)">Reportar el error de persistencia.</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(941.76 2309.83125)">Corregir la causa antes de reintentar.</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #19283f" transform="translate(941.76 2328.07125)">La conexión se cierra en finally.</text>
+   </g>
+   <g id="text_51">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #2557a7" x="684" y="2410.937187" transform="rotate(-0 684 2410.937187)">BALANCE DEL LOTE VALIDADO: 1,200 entradas = 1,072 aptas + 128 en cuarentena</text>
+   </g>
+   <g id="text_52">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #52637a" x="684" y="2441.156406" transform="rotate(-0 684 2441.156406)">Ejecutor completo: python -m src.Todas_las_fases  |  run_ing3.py reutiliza las salidas de fase 2.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p79a6f4dcf9">
+   <rect x="0" y="0" width="1368" height="2469.6"/>
+  </clipPath>
+ </defs>
+</svg>

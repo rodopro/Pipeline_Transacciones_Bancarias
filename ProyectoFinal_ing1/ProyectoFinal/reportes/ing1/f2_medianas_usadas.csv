@@ -1,0 +1,6 @@
+﻿dataset,variable,grupo,mediana
+transacciones_atm,monto_mxn,DEPOSITO,4000.0
+transacciones_atm,monto_mxn,PAGO_SERVICIOS,4000.0
+transacciones_atm,monto_mxn,RETIRO,2000.0
+transferencias_digitales,amount,MXN,18426.845
+transferencias_digitales,amount,USD,19356.64

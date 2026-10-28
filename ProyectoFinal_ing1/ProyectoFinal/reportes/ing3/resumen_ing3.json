@@ -1,0 +1,31 @@
+{
+  "registros_entrada": 1200,
+  "limpias_cargadas": 1072,
+  "cuarentena_cargada": 128,
+  "balance_correcto": true,
+  "parametros_fase5": {
+    "minimo": 0.0,
+    "maximo": 56966.212499999994,
+    "p33": 3048.726666666664,
+    "p67": 16474.57,
+    "columna": "monto_mxn_capped",
+    "metodo": "terciles_por_importe",
+    "registros_para_ajuste": 1200,
+    "regla": "Bajo <= P33; P33 < Medio <= P67; Alto > P67; constante => Bajo y 0"
+  },
+  "integridad_sqlite": "ok",
+  "modo_carga": "reemplazo_atomico_de_ambas_tablas",
+  "base_datos": "C:\\Users\\Colibecas\\Downloads\\ProyectoFinal_ing1 (1)\\ProyectoFinal_ing1\\ProyectoFinal\\data\\proyecto_final.sqlite3",
+  "diagramas": {
+    "pipeline_robusto_por_fases_png": "diagramas/pipeline_robusto_por_fases.png",
+    "pipeline_robusto_por_fases_svg": "diagramas/pipeline_robusto_por_fases.svg",
+    "diagrama_clases_ing3_png": "diagramas/diagrama_clases_ing3.png",
+    "diagrama_clases_ing3_svg": "diagramas/diagrama_clases_ing3.svg",
+    "flujo_entradas_salidas_ing3_png": "diagramas/flujo_entradas_salidas_ing3.png",
+    "flujo_entradas_salidas_ing3_svg": "diagramas/flujo_entradas_salidas_ing3.svg",
+    "pipeline_robusto_por_fases_mmd": "diagramas/pipeline_robusto_por_fases.mmd",
+    "diagrama_clases_ing3_mmd": "diagramas/diagrama_clases_ing3.mmd",
+    "flujo_entradas_salidas_ing3_mmd": "diagramas/flujo_entradas_salidas_ing3.mmd",
+    "ver_diagramas_html": "diagramas/ver_diagramas.html"
+  }
+}
