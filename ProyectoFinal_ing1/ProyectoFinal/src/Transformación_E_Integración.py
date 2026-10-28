@@ -3,6 +3,7 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+from pydantic import BaseModel, Field, ValidationError, field_validator # instalar python -m pip install pydantic
 
 # Configuración visual para las gráficas
 AZUL = "#2a78d6"
@@ -31,9 +32,76 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 PATH_DATA = BASE_DIR / "data"
 PATH_REPORTES = BASE_DIR / "reportes"
 PATH_FIGURAS = PATH_REPORTES / "figuras_ing2"
+PATH_SEGMENTOS = PATH_REPORTES / "transacciones_por_nivel"  # Carpeta para archivos individuales
 
 PATH_REPORTES.mkdir(parents=True, exist_ok=True)
 PATH_FIGURAS.mkdir(parents=True, exist_ok=True)
+PATH_SEGMENTOS.mkdir(parents=True, exist_ok=True)
+
+
+# ==========================================
+# MODELO PYDANTIC (Validación y Cuarentena)
+# ==========================================
+class TransaccionModel(BaseModel):
+    transaccion_id: str
+    account_id: str
+    monto_mxn_capped: float
+    moneda: str
+
+    @field_validator("monto_mxn_capped")
+    @classmethod
+    def validar_monto_positivo(cls, v: float) -> float:
+        if v <= 0:
+            raise ValueError("El monto debe ser estrictamente mayor a 0")
+        return v
+
+    @field_validator("account_id")
+    @classmethod
+    def validar_formato_cuenta(cls, v: str) -> str:
+        if not v or not v.startswith("CTA-"):
+            raise ValueError("ID de cuenta inválido o no cumple el formato CTA-XXXX")
+        return v
+
+
+def validar_con_pydantic_y_cuarentena(df, cuentas_validas):
+    """Fase 4: Validación robusta usando modelos Pydantic y separación de cuarentena"""
+    registros_validos = []
+    registros_cuarentena = []
+
+    for _, row in df.iterrows():
+        cuenta_str = str(row["account_id"])
+        es_huerfano = cuenta_str not in cuentas_validas
+
+        if es_huerfano:
+            row_dict = row.to_dict()
+            row_dict["es_huerfano"] = True
+            row_dict["motivo_rechazo_cuarentena"] = "Cuenta huérfana no registrada en Core Bancario"
+            registros_cuarentena.append(row_dict)
+            continue
+
+        try:
+            TransaccionModel(
+                transaccion_id=str(row["transaccion_id"]),
+                account_id=cuenta_str,
+                monto_mxn_capped=float(row["monto_mxn_capped"]),
+                moneda=str(row["moneda"])
+            )
+            row_dict = row.to_dict()
+            row_dict["es_huerfano"] = False
+            row_dict["motivo_rechazo_cuarentena"] = None
+            registros_validos.append(row_dict)
+        except ValidationError as e:
+            row_dict = row.to_dict()
+            row_dict["es_huerfano"] = False
+            errores = "; ".join([err["msg"] for err in e.errors()])
+            row_dict["motivo_rechazo_cuarentena"] = f"Error Pydantic: {errores}"
+            registros_cuarentena.append(row_dict)
+
+    df_validos = pd.DataFrame(registros_validos)
+    df_cuarentena = pd.DataFrame(registros_cuarentena)
+
+    df_resultado = pd.concat([df_validos, df_cuarentena], ignore_index=True)
+    return df_resultado
 
 
 def cargar_datos_fuentes(path_cuentas, path_atm, path_json):
@@ -45,7 +113,6 @@ def cargar_datos_fuentes(path_cuentas, path_atm, path_json):
         data_json = json.load(f)
     df_json = pd.DataFrame(data_json)
 
-    # 1. Homologar columnas de ATM
     df_atm.rename(
         columns={
             "id_transaccion": "transaccion_id",
@@ -60,7 +127,6 @@ def cargar_datos_fuentes(path_cuentas, path_atm, path_json):
     df_atm["notification_email"] = "atm_sin_correo@banco.com.mx"
     df_atm["beneficiary_clabe"] = "000000000000000000"
 
-    # 2. Homologar columnas de Transferencias Digitales
     df_json.rename(
         columns={
             "transfer_id": "transaccion_id",
@@ -173,50 +239,26 @@ def tratar_outliers_iqr(df):
     return df, Q1, Q3, IQR, limite_superior
 
 
-def cruce_y_detectar_huerfanos(df_transacciones, df_cuentas):
-    """Fase 4: Detección de cuentas huérfanas no registradas en Core Bancario"""
-    df = df_transacciones.copy()
-
-    posibles_nombres = ["account_id", "id_cuenta", "cuenta_id", "id", "cuenta"]
-    col_cuenta_master = None
-
-    for col in posibles_nombres:
-        if col in df_cuentas.columns:
-            col_cuenta_master = col
-            break
-
-    if not col_cuenta_master:
-        col_cuenta_master = df_cuentas.columns[0]
-
-    cuentas_validas = set(df_cuentas[col_cuenta_master].astype(str).unique())
-
-    df["es_huerfano"] = ~df["account_id"].astype(str).isin(cuentas_validas)
-    df["motivo_rechazo_cuarentena"] = np.where(
-        df["es_huerfano"],
-        "Cuenta huérfana no registrada en Core Bancario",
-        None,
-    )
-
-    return df
-
-
 def transformacion_discretizacion_escalado(df):
     """Fase 5: Normalización Min-Max [0, 1] y Discretización por Ancho Igual (pd.cut)"""
     df = df.copy()
+
     min_val = df["monto_mxn_capped"].min()
     max_val = df["monto_mxn_capped"].max()
 
     if max_val != min_val:
-        df["monto_minmax"] = (df["monto_mxn_capped"] - min_val) / (max_val - min_val)
+        df["monto_minmax"] = (df["monto_mxn_capped"] - min_val) / (
+            max_val - min_val
+        )
     else:
         df["monto_minmax"] = 0.0
 
-    # Discretización por intervalos de igual tamaño (pd.cut) para mostrar la distribución real sesgada
     df["nivel_monto"] = pd.cut(
         df["monto_mxn_capped"],
         bins=3,
         labels=["Bajo", "Medio", "Alto"],
     )
+
     return df
 
 
@@ -234,7 +276,6 @@ def generar_graficas_ing2(df_final, limite_superior):
 
     # 1. Tratamiento de Outliers (IQR Capping) - Versión con Zoom en la distribución real
     ax1 = axes[0, 0]
-    # Filtramos para visualizar la zona donde se concentra el 98% de los datos y ver el efecto del Capping
     zoom_max = min(df_final["monto_mxn"].max(), limite_superior * 2.5)
     datos_visibles = df_final["monto_mxn"][df_final["monto_mxn"] <= zoom_max]
     datos_capped = df_final["monto_mxn_capped"][df_final["monto_mxn_capped"] <= zoom_max]
@@ -317,6 +358,7 @@ def generar_graficas_ing2(df_final, limite_superior):
     plt.close(fig)
     print(f"   [OK] Panel gráfico optimizado guardado en: {ruta_panel.relative_to(BASE_DIR)}")
 
+
 # ==========================================
 # EJECUCIÓN PRINCIPAL
 # ==========================================
@@ -339,8 +381,12 @@ if __name__ == "__main__":
     # 4. Outliers con IQR (Capping)
     df_sin_outliers, Q1, Q3, IQR, sup = tratar_outliers_iqr(df_imputado)
 
-    # 5. Cruce maestro y detección de huérfanos
-    df_cruzado = cruce_y_detectar_huerfanos(df_sin_outliers, df_cuentas)
+    # 5. Validación robusta con Pydantic y detección de huérfanos
+    posibles_nombres = ["account_id", "id_cuenta", "cuenta_id", "id", "cuenta"]
+    col_cuenta_master = next((col for col in posibles_nombres if col in df_cuentas.columns), df_cuentas.columns[0])
+    cuentas_validas = set(df_cuentas[col_cuenta_master].astype(str).unique())
+
+    df_cruzado = validar_con_pydantic_y_cuarentena(df_sin_outliers, cuentas_validas)
 
     # 6. Escalamiento Min-Max y Discretización
     df_final = transformacion_discretizacion_escalado(df_cruzado)
@@ -348,18 +394,30 @@ if __name__ == "__main__":
     # 7. Generar evidencia gráfica
     generar_graficas_ing2(df_final, sup)
 
+    # Guardar archivo maestro completo
+    output_file = PATH_REPORTES / "transacciones_procesadas_limpias.csv"
+    df_final.to_csv(output_file, index=False, encoding="utf-8-sig")
+
+    # ==========================================
+    # 8. GUARDAR ARCHIVOS INDIVIDUALES POR CARPETA
+    # ==========================================
+    # Segmentos por Nivel de Monto (solo transacciones válidas)
+    df_validas = df_final[df_final["es_huerfano"] == False]
+    
+    df_validas[df_validas["nivel_monto"] == "Bajo"].to_csv(PATH_SEGMENTOS / "nivel_bajo.csv", index=False, encoding="utf-8-sig")
+    df_validas[df_validas["nivel_monto"] == "Medio"].to_csv(PATH_SEGMENTOS / "nivel_medio.csv", index=False, encoding="utf-8-sig")
+    df_validas[df_validas["nivel_monto"] == "Alto"].to_csv(PATH_SEGMENTOS / "nivel_alto.csv", index=False, encoding="utf-8-sig")
+    
+    # Registros en Cuarentena (huérfanos o con errores de validación)
+    df_final[df_final["es_huerfano"] == True].to_csv(PATH_SEGMENTOS / "cuarentena.csv", index=False, encoding="utf-8-sig")
+
     # Resumen técnico en consola
     print("\n=== RESUMEN TÉCNICO DE TRANSFORMACIÓN (INGENIERO/A 2) ===")
     print(f"Total registros integrados: {len(df_unificado)}")
-    print(
-        f"Registros huérfanos detectados: {df_final['es_huerfano'].sum()} (Desviados a cuarentena)"
-    )
+    print(f"Registros en Cuarentena guardados en carpeta: {PATH_SEGMENTOS.relative_to(BASE_DIR)}")
     print(f"Límite superior IQR para Capping de Monto: ${sup:,.2f} MXN")
     print(
         "\nDistribución por Nivel de Monto (Discretización):\n",
         df_final["nivel_monto"].value_counts(),
     )
-
-    output_file = PATH_REPORTES / "transacciones_procesadas_limpias.csv"
-    df_final.to_csv(output_file, index=False, encoding="utf-8-sig")
-    print(f"\n[ÉXITO] Archivo '{output_file.name}' generado correctamente en {output_file.parent.name}/.")
+    print(f"\n[ÉXITO] Archivo maestro y segmentos individuales generados correctamente.")
