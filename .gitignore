@@ -1,1 +1,11 @@
 # Proyecto de Ingeniería de Datos
+
+# Archivos de trabajo y documentos preparados localmente
+tmp/
+temp/
+output/
+
+# Cachés generadas por Python y pytest
+__pycache__/
+.pytest_cache/
+*.py[cod]
