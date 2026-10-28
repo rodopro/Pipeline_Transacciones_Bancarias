@@ -13,6 +13,7 @@ from src.fase6_validacion import segregar_registros
 from src.fase7_base_datos import cargar_base_datos
 from src.modelos_ing3 import TransaccionLimpia
 from src.pipeline_ing3 import ejecutar_fases_5_a_7
+from src.Todas_las_fases import ejecutar_fases_6_y_7
 from src.Transformación_E_Integración import (
     cargar_datos_fuentes, cruce_y_detectar_huerfanos, homologar_fechas_y_monedas,
     imputar_faltantes, tratar_outliers_iqr,
@@ -180,6 +181,34 @@ def test_fechas_mixtas_y_corrupcion_sin_fecha_inventada():
     resultado = homologar_fechas_y_monedas(df)
     assert resultado.fecha_corta.iloc[:4].tolist() == ["2026-09-12", "2026-09-28", "2026-09-12", "2026-09-07"]
     assert resultado.fecha_corta.iloc[4:].isna().all()
+
+
+@pytest.mark.parametrize("filas,esperado", [
+    ([], (0, 0)),
+    ([transaccion(notification_email="malo")], (0, 1)),
+    ([transaccion(), transaccion(transaccion_id="RECHAZADA", account_id="HUERFANA")], (1, 1)),
+])
+def test_todas_las_fases_valida_carga_y_conserva_evidencias(tmp_path, filas, esperado):
+    df = pd.DataFrame(filas) if filas else pd.DataFrame(columns=["monto_mxn_capped"])
+    transformadas = fase5(df)
+    ruta = tmp_path / "unificado.sqlite3"
+    reportes = tmp_path / "reportes"
+    primero = ejecutar_fases_6_y_7(transformadas, CUENTAS, ruta, reportes)
+    segundo = ejecutar_fases_6_y_7(transformadas, CUENTAS, ruta, reportes)
+
+    assert primero == segundo
+    assert conteos(ruta) == esperado
+    assert segundo["registros_entrada"] == len(filas)
+    assert segundo["balance_correcto"] and segundo["integridad_sqlite"] == "ok"
+    assert segundo["parametros_fase5"] == transformadas.attrs["parametros_fase5"]
+    assert json.loads((reportes / "resumen_ing3.json").read_text(encoding="utf-8")) == segundo
+    assert len(pd.read_csv(reportes / "transacciones_limpias.csv")) == esperado[0]
+    assert len(pd.read_csv(reportes / "cuarentena_errores.csv")) == esperado[1]
+    for archivo in segundo["diagramas"].values():
+        assert (reportes / archivo).is_file()
+    if esperado[0]:
+        with sqlite3.connect(ruta) as conn:
+            assert conn.execute("SELECT beneficiary_clabe FROM transacciones_limpias").fetchone()[0] == "012210100614023846"
 
 
 def test_corrupcion_de_fase2_llega_a_cuarentena_sin_imputar():

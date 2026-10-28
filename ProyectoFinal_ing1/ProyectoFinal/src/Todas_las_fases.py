@@ -7,8 +7,10 @@ from __future__ import annotations
 
 import json
 import re
+import sqlite3
 import sys
 import time
+from contextlib import closing
 from pathlib import Path
 from typing import Callable
 
@@ -550,22 +552,81 @@ if __package__:
         cargar_datos_fuentes as cargar_datos_fuentes_ing2,
         homologar_fechas_y_monedas, imputar_faltantes as imputar_faltantes_ing2,
         tratar_outliers_iqr, cruce_y_detectar_huerfanos,
-        transformacion_discretizacion_escalado,
     )
-    from .pipeline_ing3 import ejecutar_fases_5_a_7
+    from .fase5_transformacion import transformacion_discretizacion_escalado
+    from .fase6_validacion import segregar_registros
+    from .fase7_base_datos import cargar_base_datos
+    from .modelos_ing3 import RegistroCuarentena, TransaccionLimpia
+    from .diagramas_ing3 import generar_diagramas
 else:
     sys.path.insert(0, str(C.RAIZ))
     from src.Transformación_E_Integración import (
         cargar_datos_fuentes as cargar_datos_fuentes_ing2,
         homologar_fechas_y_monedas, imputar_faltantes as imputar_faltantes_ing2,
         tratar_outliers_iqr, cruce_y_detectar_huerfanos,
-        transformacion_discretizacion_escalado,
     )
-    from src.pipeline_ing3 import ejecutar_fases_5_a_7
+    from src.fase5_transformacion import transformacion_discretizacion_escalado
+    from src.fase6_validacion import segregar_registros
+    from src.fase7_base_datos import cargar_base_datos
+    from src.modelos_ing3 import RegistroCuarentena, TransaccionLimpia
+    from src.diagramas_ing3 import generar_diagramas
+
+
+# ==========================================================================
+# 4. FASES 5, 6 Y 7: ESCALAMIENTO, VALIDACIÓN Y BASE DE DATOS (INGENIERO/A 3)
+# ==========================================================================
+# Fase 5: transformacion_discretizacion_escalado aplica Min-Max y terciles
+# sobre monto_mxn_capped. El orquestador la ejecuta una sola vez, después de
+# las fases del Ingeniero/a 2, y entrega ese mismo DataFrame a las fases 6 y 7.
+# Las reglas de Pydantic y el commit/rollback se reutilizan de sus módulos.
+def ejecutar_fases_6_y_7(
+    transformadas: pd.DataFrame, cuentas_validas: set[str],
+    ruta_bd: str | Path, directorio_reportes: str | Path,
+) -> dict:
+    """Valida la salida de fase 5, carga ambas tablas y guarda sus evidencias."""
+    print("\n=== FASE 6: VALIDACIÓN PYDANTIC Y CUARENTENA (INGENIERO/A 3) ===")
+    # Un ValidationError se registra por fila y no detiene el resto del lote.
+    limpios, cuarentena = segregar_registros(transformadas, cuentas_validas)
+    print(f"Registros válidos: {len(limpios)} | En cuarentena: {len(cuarentena)}")
+
+    print("\n=== FASE 7: CARGA ATÓMICA EN SQLITE (INGENIERO/A 3) ===")
+    # Ambas tablas se reemplazan en la misma transacción. Un error revierte
+    # la carga completa y conserva el lote anterior mediante rollback().
+    carga = cargar_base_datos(limpios, cuarentena, ruta_bd, reemplazar=True)
+    with closing(sqlite3.connect(ruta_bd)) as conn:
+        integridad = conn.execute("PRAGMA integrity_check").fetchone()[0]
+
+    resumen = {
+        "registros_entrada": len(transformadas), **carga,
+        "balance_correcto": len(transformadas) == len(limpios) + len(cuarentena),
+        "parametros_fase5": transformadas.attrs["parametros_fase5"],
+        "integridad_sqlite": integridad,
+        "modo_carga": "reemplazo_atomico_de_ambas_tablas",
+        "base_datos": str(Path(ruta_bd).resolve()),
+    }
+    salida = Path(directorio_reportes)
+    salida.mkdir(parents=True, exist_ok=True)
+    transformadas.to_csv(salida / "fase5_transformadas.csv", index=False, encoding="utf-8-sig")
+    for nombre, registros, modelo in (
+        ("transacciones_limpias.csv", limpios, TransaccionLimpia),
+        ("cuarentena_errores.csv", cuarentena, RegistroCuarentena),
+    ):
+        pd.DataFrame([r.model_dump() for r in registros], columns=list(modelo.model_fields)).to_csv(
+            salida / nombre, index=False, encoding="utf-8-sig"
+        )
+    resumen["diagramas"] = {
+        clave: f"diagramas/{archivo}"
+        for clave, archivo in generar_diagramas(salida / "diagramas", resumen).items()
+    }
+    (salida / "resumen_ing3.json").write_text(
+        json.dumps(resumen, ensure_ascii=False, indent=2, allow_nan=False) + "\n", encoding="utf-8"
+    )
+    print(json.dumps(resumen, ensure_ascii=False, indent=2))
+    return resumen
 
 
 # ==========================================
-# 4. FIGURAS Y DASHBOARD DEL INGENIERO/A 2
+# 5. FIGURAS Y DASHBOARD DEL INGENIERO/A 2
 # ==========================================
 AZUL, VERDE, ROJO, NARANJA, GRIS, TINTA, TINTA2 = "#2a78d6", "#2eb872", "#e74c3c", "#eb6834", "#8a8984", "#0b0b0b", "#52514e"
 plt.rcParams.update({
@@ -711,7 +772,7 @@ def generar_graficas_ing2(df_final, limite_superior):
 
 
 # ==========================================================================
-# 5. ORQUESTADOR GENERAL (EJECUCIÓN DE TODAS LAS FASES)
+# 6. ORQUESTADOR GENERAL (EJECUCIÓN DE TODAS LAS FASES)
 # ==========================================================================
 ENC = "utf-8-sig"
 
@@ -799,7 +860,7 @@ def ejecutar_pipeline():
     distribucion_sesgada(seguro["transferencias_digitales"]["amount"], "amount SPEI", "importe", C.DIR_FIGURAS / "05_sesgo_amount_spei.png")
     print("   [OK] reportes/ing1/figuras/*.png")
 
-    print("\n=== FASE 3-5: INTEGRACIÓN, HOMOLOGACIÓN, IQR Y ESCALAMIENTO (INGENIERO/A 2) ===")
+    print("\n=== FASES 3-4: INTEGRACIÓN, HOMOLOGACIÓN E IQR (INGENIERO/A 2) ===")
     path_cuentas = C.DIR_INTERIM / "catalogo_cuentas_fase2.csv"
     path_atm = C.DIR_INTERIM / "transacciones_atm_fase2.csv"
     path_json = C.DIR_INTERIM / "transferencias_digitales_fase2.json"
@@ -809,7 +870,10 @@ def ejecutar_pipeline():
     df_imputado = imputar_faltantes_ing2(df_homologado)
     df_sin_outliers, Q1, Q3, IQR, sup = tratar_outliers_iqr(df_imputado)
     df_cruzado = cruce_y_detectar_huerfanos(df_sin_outliers, df_cuentas)
+
+    print("\n=== FASE 5: MIN-MAX Y DISCRETIZACIÓN POR TERCILES (INGENIERO/A 3) ===")
     df_final = transformacion_discretizacion_escalado(df_cruzado)
+    print(json.dumps(df_final.attrs["parametros_fase5"], ensure_ascii=False, indent=2))
 
     # Generar panel de gráficas del Ingeniero/a 2
     generar_graficas_ing2(df_final, sup)
@@ -824,12 +888,10 @@ def ejecutar_pipeline():
     output_file.parent.mkdir(parents=True, exist_ok=True)
     df_final.to_csv(output_file, index=False, encoding=ENC)
     print(f"\n[ÉXITO] Archivo '{output_file.name}' generado correctamente en reportes/.")
-    print("\n=== FASES 5-7: VALIDACION, CUARENTENA Y CARGA SQLITE (ING. 3) ===")
-    resumen_ing3 = ejecutar_fases_5_a_7(
-        df_cruzado, set(df_cuentas["id_cuenta"].dropna()),
+    ejecutar_fases_6_y_7(
+        df_final, set(df_cuentas["id_cuenta"].dropna()),
         C.RAIZ / "data" / "proyecto_final.sqlite3", C.RAIZ / "reportes" / "ing3",
     )
-    print(json.dumps(resumen_ing3, ensure_ascii=False, indent=2))
     print(f"\n¡Todo ejecutado con éxito de punta a punta en {time.time() - t0:.1f} s!")
     return 0
 
