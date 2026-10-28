@@ -201,25 +201,22 @@ def cruce_y_detectar_huerfanos(df_transacciones, df_cuentas):
 
 
 def transformacion_discretizacion_escalado(df):
-    """Fase 5: Normalización Min-Max [0, 1] y Discretización en 3 tramos"""
+    """Fase 5: Normalización Min-Max [0, 1] y Discretización por Ancho Igual (pd.cut)"""
     df = df.copy()
-
     min_val = df["monto_mxn_capped"].min()
     max_val = df["monto_mxn_capped"].max()
 
     if max_val != min_val:
-        df["monto_minmax"] = (df["monto_mxn_capped"] - min_val) / (
-            max_val - min_val
-        )
+        df["monto_minmax"] = (df["monto_mxn_capped"] - min_val) / (max_val - min_val)
     else:
         df["monto_minmax"] = 0.0
 
-    df["nivel_monto"] = pd.qcut(
-        df["monto_mxn_capped"].rank(method="first"),
-        q=3,
+    # Discretización por intervalos de igual tamaño (pd.cut) para mostrar la distribución real sesgada
+    df["nivel_monto"] = pd.cut(
+        df["monto_mxn_capped"],
+        bins=3,
         labels=["Bajo", "Medio", "Alto"],
     )
-
     return df
 
 
